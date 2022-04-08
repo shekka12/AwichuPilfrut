@@ -23,7 +23,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main) //Parametro para visualizar imagenes en la pantalla de Log
         presenter = LoginPresenter(SignInInteractorImpl())
         presenter.attachView(this)
         btn_signIn.setOnClickListener {
