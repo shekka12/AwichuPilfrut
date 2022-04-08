@@ -5,15 +5,34 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:background="@drawable/fondo2"
         tools:context=".presentation.main1.view.MainAwichuActivity">
 
-        <TextView
-                android:text="@string/awichu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:gravity="center"
-                android:textSize="30sp"/>
+        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                app:srcCompat="@drawable/awichu"
+                android:id="@+id/title"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/logo2"
+                android:id="@+id/logo"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/droid"
+                android:id="@+id/logo3"
+        />
 
 </LinearLayout>
