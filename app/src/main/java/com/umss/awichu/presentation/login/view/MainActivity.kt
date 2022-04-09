@@ -55,10 +55,20 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
         //Toast.makeText(this, "prueba boton",Toast.LENGTH_SHORT).show()
         val email = etx_email.text.toString().trim()
         val password = etx_password.text.toString().trim()
-        if (presenter.checkEmptyFields(email, password))
-            toast(this, "uno o ambos campos estan vacios")
-        else {
-            presenter.signInUserWithEmailandPassword(email, password)
+        if (presenter.checkEmptyEmail(email) and presenter.checkEmptyPassword(password)) {
+            toast(this, "ambos campos estan vacios")
+        } else {
+            if (presenter.checkEmptyEmail(email)) {
+                toast(this, "ingrese un correo")
+            } else {
+                if (presenter.checkEmptyPassword(password)){
+                    toast(this, "ingrese una contraseña")
+                }
+                else{
+                    presenter.signInUserWithEmailandPassword(email, password)
+                }
+
+            }
         }
     }
 

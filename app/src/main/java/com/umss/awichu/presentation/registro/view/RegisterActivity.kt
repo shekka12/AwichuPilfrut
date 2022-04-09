@@ -7,7 +7,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
-import com.umss.awichu.domain.interactorsCasosDuso.registerInteractor.registerInteractorImpl
+import com.umss.awichu.presentation.registerInteractor.registerInteractorImpl
 import com.umss.awichu.presentation.login.view.MainActivity
 import com.umss.awichu.presentation.main1.view.MainAwichuActivity
 import com.umss.awichu.presentation.registro.RegisterContract

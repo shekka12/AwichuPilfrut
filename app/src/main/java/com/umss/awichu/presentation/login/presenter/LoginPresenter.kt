@@ -43,10 +43,12 @@ class LoginPresenter(signInInteractor: SignInInteractor): LoginContract.LoginPre
         })
     }
 
+    override fun checkEmptyEmail(email: String): Boolean {
+        return email.isEmpty()
+    }
 
-
-    override fun checkEmptyFields(email: String, passworw: String): Boolean {
-        return email.isEmpty() || passworw.isEmpty()
+    override fun checkEmptyPassword(passworw: String): Boolean {
+        return  passworw.isEmpty()
     }
 
 
