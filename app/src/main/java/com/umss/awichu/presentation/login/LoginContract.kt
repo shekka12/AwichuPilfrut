@@ -10,12 +10,12 @@ interface LoginContract {
         fun navigateMain()
         fun navigateToRegister()
     }
-    interface LoginPresenter{
+    interface LoginPresenter {
         fun attachView(view: loginView)
         fun dettachView()
-        fun isVIewAtached():Boolean
+        fun isVIewAtached(): Boolean
         fun signInUserWithEmailandPassword(email: String, passworw: String)
-        fun checkEmptyFields(email: String, passworw: String):Boolean
+        fun checkEmptyEmail(email: String): Boolean
+        fun checkEmptyPassword(passworw: String): Boolean
     }
-
 }

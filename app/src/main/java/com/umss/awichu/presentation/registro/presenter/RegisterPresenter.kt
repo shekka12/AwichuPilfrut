@@ -1,13 +1,13 @@
 package com.umss.awichu.presentation.registro.presenter
 
 import androidx.core.util.PatternsCompat
-import com.umss.awichu.domain.interactorsCasosDuso.registerInteractor.RegisterInteractor
+import com.umss.awichu.presentation.registerInteractor.RegisterInteractor
 import com.umss.awichu.presentation.registro.RegisterContract
 
-class RegisterPresenter(registerInteractor:RegisterInteractor): RegisterContract.registerPresenter {
+class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContract.registerPresenter {
 
     var view:RegisterContract.registerView? = null
-    var registerInteractor:RegisterInteractor? = null
+    var registerInteractor: RegisterInteractor? = null
     init{
         this.registerInteractor = registerInteractor
     }
@@ -43,7 +43,7 @@ class RegisterPresenter(registerInteractor:RegisterInteractor): RegisterContract
 
     override fun signUp(fullname: String, email: String, password1: String) {
         view?.Showprogress()
-        registerInteractor?.signUp(fullname,email, password1, object:RegisterInteractor.registerCallBack{
+        registerInteractor?.signUp(fullname,email, password1, object: RegisterInteractor.registerCallBack{
             override fun onRegisterSucces() {
                 view?.navigateToMain()
                 view?.HideProgress()

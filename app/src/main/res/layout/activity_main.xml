@@ -98,7 +98,7 @@
 			android:text="¿Olvidaste tu contraseña?"
 			android:textColor="@color/white"
 			android:textStyle="bold"
-			android:textSize="20"
+			android:textSize="20dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
