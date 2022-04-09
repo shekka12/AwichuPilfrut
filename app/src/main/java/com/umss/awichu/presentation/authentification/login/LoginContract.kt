@@ -1,21 +1,25 @@
-package com.umss.awichu.presentation.login
+package com.umss.awichu.presentation.authentification.login
 
 interface LoginContract {
 
     interface loginView{
-        fun showError(msgError: String)
+        fun showError(msgError: String?)
         fun showProgressBar()
         fun hideProgreseDialog()
         fun signIn()
         fun navigateMain()
         fun navigateToRegister()
+        fun navigateToPasswordReset()
     }
     interface LoginPresenter {
         fun attachView(view: loginView)
         fun dettachView()
+        fun dettachJob()
         fun isVIewAtached(): Boolean
         fun signInUserWithEmailandPassword(email: String, passworw: String)
         fun checkEmptyEmail(email: String): Boolean
         fun checkEmptyPassword(passworw: String): Boolean
+        fun checkValidEmailLogin(email: String):Boolean
+
     }
 }

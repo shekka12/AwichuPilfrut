@@ -1,12 +1,12 @@
-package com.umss.awichu.presentation.registro.presenter
+package com.umss.awichu.presentation.authentification.registro.presenter
 
 import androidx.core.util.PatternsCompat
-import com.umss.awichu.presentation.registerInteractor.RegisterInteractor
-import com.umss.awichu.presentation.registro.RegisterContract
+import com.umss.awichu.presentation.authentification.registro.registerInteractor.RegisterInteractor
+import com.umss.awichu.presentation.authentification.registro.RegisterContract
 
 class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContract.registerPresenter {
 
-    var view:RegisterContract.registerView? = null
+    var view: RegisterContract.registerView? = null
     var registerInteractor: RegisterInteractor? = null
     init{
         this.registerInteractor = registerInteractor
@@ -28,6 +28,13 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
         return fullname.isEmpty()
     }
 
+    override fun checkValidName(fullname: String): Boolean{
+      TODO("aun no implementado")
+    }
+
+    override fun chechEmptyLastname(lastname: String): Boolean {
+        return lastname.isEmpty()
+    }
     override fun checkValidEmail(email: String): Boolean {
         return PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()
     }

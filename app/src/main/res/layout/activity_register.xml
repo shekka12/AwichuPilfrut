@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@drawable/fondo1"
-        tools:context=".presentation.registro.view.RegisterActivity">
+        tools:context=".presentation.authentification.registro.view.RegisterActivity">
 
     <ImageView
             android:layout_width="80dp"
