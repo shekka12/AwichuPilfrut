@@ -10,7 +10,10 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Awichu">
         <activity
-                android:name=".presentation.registro.view.RegisterActivity"
+                android:name=".presentation.authentification.passwordRecover.view.PasswordRecoverActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".presentation.authentification.registro.view.RegisterActivity"
                 android:exported="true"/>
         <activity
                 android:name=".presentation.main1.view.MainAwichuActivity"
@@ -22,7 +25,7 @@
                 android:label="@string/title_activity_main_awichu"
                 android:theme="@style/Theme.Awichu.Fullscreen"/>
         <activity
-                android:name=".presentation.login.view.MainActivity"
+                android:name=".presentation.authentification.login.view.MainActivity"
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

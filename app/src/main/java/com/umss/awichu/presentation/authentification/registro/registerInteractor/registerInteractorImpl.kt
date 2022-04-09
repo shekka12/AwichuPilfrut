@@ -1,4 +1,4 @@
-package com.umss.awichu.presentation.registerInteractor
+package com.umss.awichu.presentation.authentification.registro.registerInteractor
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
@@ -19,7 +19,6 @@ class registerInteractorImpl: RegisterInteractor {
                     }
                 }
                 }
-                //listener.onRegisterSucces()
 
             }else{
                 listener.onRegisterFailure(itSignUp.exception?.message.toString())

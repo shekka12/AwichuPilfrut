@@ -1,4 +1,4 @@
-package com.umss.awichu.presentation.registerInteractor
+package com.umss.awichu.presentation.authentification.registro.registerInteractor
 
 interface RegisterInteractor {
 

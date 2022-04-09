@@ -8,7 +8,7 @@
 		android:layout_height="match_parent"
 		android:orientation="vertical"
 		android:background="@drawable/fondo1"
-		tools:context=".presentation.login.view.MainActivity">
+		tools:context=".presentation.authentification.login.view.MainActivity">
 
 	<ImageView
 			android:layout_width="200dp"
@@ -24,6 +24,7 @@
 			android:layout_marginTop="16dp"
 			app:srcCompat="@drawable/logo2"
 			android:id="@+id/imageView9"/>
+
 	<EditText
 
 			android:layout_width="340dp"
@@ -40,21 +41,33 @@
 			android:layout_marginTop="32dp"
 			app:layout_constraintHorizontal_bias="0.497"
 			android:minHeight="48dp"
-			tools:ignore="Autofill,HardcodedText"/>
-	<EditText
+			tools:ignore="Autofill,HardcodedText" android:textColorLink="@color/teal_200"
+			android:textColorHighlight="@color/teal_700"/>
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:layout_marginTop="32dp"
 			android:layout_width="340dp"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="32dp"
-			android:background="@color/white"
 			android:layout_gravity="center"
-			android:inputType="textPassword"
-			android:ems="10"
-			android:hint="@string/contrase_a"
-			android:id="@+id/etx_password"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/etx_email"
-			android:minHeight="48dp" tools:ignore="Autofill"/>
+			android:background="@color/black_overlay"
+			app:endIconMode="password_toggle" tools:visibility="visible" app:passwordToggleTint="@color/teal_200"
+			app:boxStrokeColor="@color/black_overlay" app:endIconTint="#009688" app:startIconTint="#009688"
+			android:textColorHint="@color/black_overlay" app:hintTextColor="#009688" app:helperTextEnabled="false">
+
+		<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="340dp"
+				android:layout_height="wrap_content"
+				android:id="@+id/etx_password"
+				android:hint="@string/cotrase_a"
+				android:inputType="textPassword"
+				android:elevation="-2dp"
+				android:minHeight="48dp"
+				android:textColorLink="@color/teal_200"
+				android:textColorHighlight="@color/teal_700"
+				tools:ignore="Autofill" android:background="@color/white" android:textAllCaps="false"/>
+
+	</com.google.android.material.textfield.TextInputLayout>
+
 	<Button
 			android:text="iniciar sesion"
 			android:layout_width="340dp"
@@ -69,18 +82,7 @@
 			android:layout_marginTop="32dp"
 			app:layout_constraintHorizontal_bias="0.498"/>
 
-	<ProgressBar
-			style="?android:attr/progressBarStyle"
-			android:layout_width="20dp"
-			android:layout_height="50dp"
-			android:id="@+id/progressBar_singIn"
-			android:visibility="gone"
-			app:layout_constraintTop_toBottomOf="@+id/etx_password"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			android:layout_marginTop="8dp"
-			app:layout_constraintHorizontal_bias="0.498"
-			app:layout_constraintBottom_toTopOf="@+id/btn_signIn"/>
+
 	<Button
 			android:text="registrarse"
 			android:layout_width="wrap_content"
@@ -92,15 +94,29 @@
 			app:layout_constraintTop_toBottomOf="@+id/btn_signIn"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			android:layout_marginTop="32dp"
+			android:layout_marginTop="1dp"
+			app:layout_constraintHorizontal_bias="0.498"/>
+	<ProgressBar
+			style="?android:attr/progressBarStyle"
+			android:layout_width="match_parent"
+			android:layout_height="38dp"
+			android:id="@+id/progressBar_singIn"
+			android:elevation="2dp"
+			android:visibility="gone"
+			app:layout_constraintTop_toBottomOf="@id/etx_password"
+			app:layout_constraintStart_toStartOf="@id/etx_password"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginTop="2dp"
 			app:layout_constraintHorizontal_bias="0.498"/>
 	<TextView
 			android:text="¿Olvidaste tu contraseña?"
 			android:textColor="@color/white"
 			android:textStyle="bold"
+			android:layout_marginTop="10dp"
 			android:textSize="20dp"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
-			android:id="@+id/textView6"/>
+			android:id="@+id/txt_recoverPassword"/>
+
 </LinearLayout>
