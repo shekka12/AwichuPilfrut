@@ -22,5 +22,6 @@ interface RegisterContract {
         fun checkPasswordMatch(password1: String, passworod2:String): Boolean
         fun signUp(fullname: String, email: String, password1: String)
 
+
     }
 }
