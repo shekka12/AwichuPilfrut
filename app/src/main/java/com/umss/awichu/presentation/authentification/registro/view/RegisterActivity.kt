@@ -29,7 +29,10 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
         buttonRegistro.setOnClickListener {
             signUp()
 
+        }
 
+        buttonCancel.setOnClickListener {
+            navigateToMain()
         }
 
     }
@@ -56,22 +59,23 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
             etx_fullname.error = "Ingrese un nombre"
             return
         }
-        if(presenter.chechEmptyLastname(lastname)){
-          etx_lastname.error = "ingrese un apellido"
-          return
+
+        if(presenter.chechEmptyLastname(lastname)) {
+            etx_lastname.error = "ingrese un apellido"
+            return
         }
         if (!presenter.checkValidEmail(email)){
-            etx_emailRegistro.error = "el correo es invalido"
+            etx_emailRegistro.error = "El correo es invalido"
             return
         }
         if (presenter.checkValidPassword(password1,password2)){
-            etx_passwordRegistro.error = "campo vacio"
-            etx_passwordRegistro2.error = "campo vacio"
+            etx_passwordRegistro.error = "Campo vacio"
+            etx_passwordRegistro2.error = "Campo vacio"
             return
         }
         if (!presenter.checkPasswordMatch(password1,password2)){
-            etx_passwordRegistro.error = "las contraseñas no son iguales"
-            etx_passwordRegistro2.error = "las contraseñas no son iguales"
+            etx_passwordRegistro.error = "Las contraseñas no son iguales"
+            etx_passwordRegistro2.error = "Las contraseñas no son iguales"
             return
         }
         presenter.signUp(fullname,email,password1)
