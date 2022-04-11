@@ -8,6 +8,7 @@ import android.widget.Toast
 import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.loginInteractor.SignInInteractorImpl
+import com.umss.awichu.menuLateral.MenuLateralActivity
 import com.umss.awichu.presentation.authentification.login.LoginContract
 import com.umss.awichu.presentation.authentification.login.presenter.LoginPresenter
 import com.umss.awichu.presentation.authentification.passwordRecover.view.PasswordRecoverActivity
@@ -79,7 +80,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
     }
 
     override fun navigateMain() {
-        val intent = Intent(this,MainAwichuActivity::class.java)
+        val intent = Intent(this,MenuLateralActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(intent)
     }
