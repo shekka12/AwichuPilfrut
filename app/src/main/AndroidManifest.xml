@@ -10,6 +10,11 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Awichu">
         <activity
+                android:name=".menuLateral.MenuLateralActivity"
+                android:exported="true"
+                android:label="@string/title_activity_menu_lateral"
+                android:theme="@style/Theme.Awichu.NoActionBar"/>
+        <activity
                 android:name=".presentation.authentification.passwordRecover.view.PasswordRecoverActivity"
                 android:exported="true"/>
         <activity
