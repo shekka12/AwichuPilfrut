@@ -25,4 +25,6 @@
     <string name="ver_perfil">Ver perfil</string>
     <string name="crear_recordatorio">Crear recordatorio</string>
     <string name="adm_perfil">Administrar perfil</string>
+    <string name="acerca_deLatera">Acerca de</string>
+    <string name="contrase_aLogin">Contraseña</string>
 </resources>

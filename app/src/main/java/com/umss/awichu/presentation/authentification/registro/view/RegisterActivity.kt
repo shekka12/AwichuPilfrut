@@ -8,6 +8,7 @@ import android.view.View.VISIBLE
 import com.google.android.gms.dynamic.IFragmentWrapper
 import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
+import com.umss.awichu.menuLateral.MenuLateralActivity
 import com.umss.awichu.presentation.authentification.registro.registerInteractor.registerInteractorImpl
 import com.umss.awichu.presentation.authentification.login.view.MainActivity
 import com.umss.awichu.presentation.main1.view.MainAwichuActivity
@@ -32,7 +33,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
         }
 
         buttonCancel.setOnClickListener {
-            navigateToMain()
+            navigateToLogin()
         }
 
     }
@@ -42,11 +43,17 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
     }
 
     override fun navigateToMain() {
-        val intent = Intent(this, MainActivity::class.java)
-        intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        val intent = Intent(this, MenuLateralActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
-
     }
+
+    override fun navigateToLogin() {
+        val intentLogin = Intent(this, MainActivity::class.java)
+        intentLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intentLogin)
+    }
+
 
     override fun signUp() {
         val fullname:String = etx_fullname.text.toString().trim()
@@ -58,24 +65,46 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
         if(presenter.checkEmptyName(fullname)){
             etx_fullname.error = "Ingrese un nombre"
             return
+        }else{
+            if(fullname.length < 2 && fullname.length >= 1) {
+                etx_fullname.error = "El nombre debe tener entre 2 a 14 letras"
+                return
+            }
         }
+
 
         if(presenter.chechEmptyLastname(lastname)) {
             etx_lastname.error = "ingrese un apellido"
             return
+        }else{
+            if(lastname.length < 2 && lastname.length >= 1) {
+                etx_lastname.error = "El apellido debe tener entre 2 a 14 letras"
+                return
+            }
         }
+
         if (!presenter.checkValidEmail(email)){
             etx_emailRegistro.error = "El correo es invalido"
+            return
+        }
+        if(!presenter.checkValidEmailDomain(email)){
+            etx_emailRegistro.error = "El correo debe tener dominio @gmail.com"
             return
         }
         if (presenter.checkValidPassword(password1,password2)){
             etx_passwordRegistro.error = "Campo vacio"
             etx_passwordRegistro2.error = "Campo vacio"
             return
+        }else{
+            if(password1.length < 8) {
+                etx_passwordRegistro.error = "La contraseña debe tener al menos 8 caracteres"
+                return
+            }
         }
+
         if (!presenter.checkPasswordMatch(password1,password2)){
-            etx_passwordRegistro.error = "Las contraseñas no son iguales"
-            etx_passwordRegistro2.error = "Las contraseñas no son iguales"
+            etx_passwordRegistro.error = "Las contraseñas no coinciden"
+            etx_passwordRegistro2.error = "Las contraseñas no coinciden"
             return
         }
         presenter.signUp(fullname,email,password1)
@@ -95,6 +124,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
         toast(this,msgError)
     }
 
+
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         presenter.detachView()
@@ -104,4 +134,5 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
         super.onDestroy()
         presenter.detachView()
     }
+
 }
