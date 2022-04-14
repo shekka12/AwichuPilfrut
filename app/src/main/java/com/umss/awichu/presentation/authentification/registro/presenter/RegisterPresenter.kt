@@ -38,7 +38,9 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
     override fun checkValidEmail(email: String): Boolean {
         return PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()
     }
-
+    override fun checkValidEmailDomain(email: String): Boolean{
+        return email.endsWith("@gmail.com")
+    }
 
     override fun checkValidPassword(password1: String, passworod2: String): Boolean {
         return password1.isEmpty() or passworod2.isEmpty()
