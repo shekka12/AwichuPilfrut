@@ -27,4 +27,6 @@
     <string name="adm_perfil">Administrar perfil</string>
     <string name="acerca_deLatera">Acerca de</string>
     <string name="contrase_aLogin">Contraseña</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
