@@ -8,14 +8,8 @@
     <fragment
             android:id="@+id/nav_home"
             android:name="com.umss.awichu.menuLateral.ui.home.HomeFragment"
-            android:label="Recordatorios"
+            android:label="Menu"
             tools:layout="@layout/fragment_home"/>
-
-    <fragment
-            android:id="@+id/nav_gallery"
-            android:name="com.umss.awichu.menuLateral.ui.gallery.GalleryFragment"
-            android:label="Acerca de"
-            tools:layout="@layout/fragment_gallery"/>
 
     <fragment
             android:id="@+id/nav_slideshow"
@@ -24,4 +18,12 @@
             tools:layout="@layout/fragment_slideshow"/>
     <fragment android:id="@+id/id_ayuda_fragment" android:name="com.umss.awichu.menuLateral.ui.ayuda.FragmenAyuda"
               android:label="ayuda" tools:layout="@layout/fragment_fragmen_ayuda"/>
+    <fragment android:id="@+id/administrarPerfil"
+              android:name="com.umss.awichu.menuLateral.ui.administrarperfil.AdministrarPerfil"
+              android:label="Administrar Perfil" tools:layout="@layout/fragment_administrar_perfil"/>
+    <activity android:id="@+id/mainActivity"
+              android:name="com.umss.awichu.presentation.authentification.login.view.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/acercaDe" android:name="com.umss.awichu.menuLateral.ui.acercade.AcercaDe"
+              android:label="fragment_acerca_de" tools:layout="@layout/fragment_acerca_de"/>
 </navigation>
