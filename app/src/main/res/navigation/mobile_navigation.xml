@@ -22,4 +22,6 @@
             android:name="com.umss.awichu.menuLateral.ui.slideshow.SlideshowFragment"
             android:label="Perfil"
             tools:layout="@layout/fragment_slideshow"/>
+    <fragment android:id="@+id/id_ayuda_fragment" android:name="com.umss.awichu.menuLateral.ui.ayuda.FragmenAyuda"
+              android:label="ayuda" tools:layout="@layout/fragment_fragmen_ayuda"/>
 </navigation>
