@@ -8,7 +8,7 @@
     <string name="correo_electronico">correo electronico</string>
     <string name="signup">signUp</string>
     <string name="confirme_contrase_a">confirme contraseña</string>
-    <string name="nombrecompleto">NombreCompleto</string>
+    <string name="nombre_completo">Nombre Completo</string>
     <string name="Loginsignup">SignUP</string>
     <string name="cotrase_a">cotraseña</string>
     <string name="title_activity_menu_lateral">MenuLateralActivity</string>
