@@ -9,6 +9,9 @@
                 android:id="@+id/nav_slideshow"
                 android:title="Mi perfil"/>
         <item
+            android:id="@+id/administrarPerfil"
+            android:title="Administrar Perfil"/>
+        <item
                 android:id="@+id/nav_home"
                 android:title="@string/crear_recordatorio"/>
         <item
@@ -16,9 +19,11 @@
             android:title="Ayuda"
         />
         <item
-                android:id="@+id/nav_gallery"
+                android:id="@+id/acercaDe"
                 android:title="@string/acerca_deLatera"/>
 
-
+       <item
+           android:id="@+id/mainActivity"
+           android:title="Cerrar Sesión"/>
     </group>
 </menu>
