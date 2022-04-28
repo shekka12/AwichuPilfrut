@@ -2,6 +2,8 @@ package com.umss.awichu.presentation.authentification.registro.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
@@ -14,16 +16,33 @@ import com.umss.awichu.presentation.authentification.login.view.MainActivity
 import com.umss.awichu.presentation.main1.view.MainAwichuActivity
 import com.umss.awichu.presentation.authentification.registro.RegisterContract
 import com.umss.awichu.presentation.authentification.registro.presenter.RegisterPresenter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), RegisterContract.registerView {
 
+    private var mIsShowPass = false
 
     lateinit var presenter: RegisterPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+
+        ivHidePassword1.setOnClickListener {
+            mIsShowPass = !mIsShowPass
+            showPassword(mIsShowPass)
+        }
+
+        showPassword(mIsShowPass)
+
+        ivHidePassword2.setOnClickListener {
+            mIsShowPass = !mIsShowPass
+            showPassword2(mIsShowPass)
+        }
+
+        showPassword2(mIsShowPass)
+
         presenter = RegisterPresenter(registerInteractorImpl())
         presenter.attachView(this)
 
@@ -36,6 +55,28 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
             navigateToLogin()
         }
 
+    }
+
+    private fun showPassword(isShow: Boolean) {
+        if (isShow) {
+            etx_passwordRegistro.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            ivHidePassword1.setImageResource(R.drawable.ic_show_password_24)
+        } else {
+            etx_passwordRegistro.transformationMethod = PasswordTransformationMethod.getInstance()
+            ivHidePassword1.setImageResource(R.drawable.ic_hide_password_24)
+        }
+        etx_passwordRegistro.setSelection(etx_passwordRegistro.text.toString().length)
+    }
+
+    private fun showPassword2(isShow: Boolean) {
+        if (isShow) {
+            etx_passwordRegistro2.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            ivHidePassword2.setImageResource(R.drawable.ic_show_password_24)
+        } else {
+            etx_passwordRegistro2.transformationMethod = PasswordTransformationMethod.getInstance()
+            ivHidePassword2.setImageResource(R.drawable.ic_hide_password_24)
+        }
+        etx_passwordRegistro2.setSelection(etx_passwordRegistro2.text.toString().length)
     }
 
     override fun getLayout(): Int {
