@@ -3,6 +3,8 @@ package com.umss.awichu.presentation.authentification.login.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.Toast
 import com.umss.awichu.R
@@ -15,17 +17,28 @@ import com.umss.awichu.presentation.authentification.passwordRecover.view.Passwo
 import com.umss.awichu.presentation.main1.view.MainAwichuActivity
 import com.umss.awichu.presentation.authentification.registro.view.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_register.*
 
 /**creado por gabriel
  *
  */
 class MainActivity : BaseActivity(), LoginContract.loginView {
 
+    private var mIsShowPass = false
+
     lateinit var presenter: LoginContract.LoginPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        ivHidePassword.setOnClickListener {
+            mIsShowPass = !mIsShowPass
+            showPassword(mIsShowPass)
+        }
+
+        showPassword(mIsShowPass)
+
         presenter = LoginPresenter(SignInInteractorImpl())
         presenter.attachView(this)
         btn_signIn.setOnClickListener {
@@ -38,6 +51,17 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
             navigateToPasswordReset()
         }
 
+    }
+
+    private fun showPassword(isShow: Boolean) {
+        if (isShow) {
+            etx_password.transformationMethod = HideReturnsTransformationMethod.getInstance()
+            ivHidePassword.setImageResource(R.drawable.ic_show_password_24)
+        } else {
+            etx_password.transformationMethod = PasswordTransformationMethod.getInstance()
+            ivHidePassword.setImageResource(R.drawable.ic_hide_password_24)
+        }
+        etx_password.setSelection(etx_password.text.toString().length)
     }
 
     override fun getLayout(): Int {

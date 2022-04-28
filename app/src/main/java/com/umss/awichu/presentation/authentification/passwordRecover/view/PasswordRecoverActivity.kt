@@ -51,12 +51,12 @@ class PasswordRecoverActivity : BaseActivity(), passwordRecoverContract.Password
         if (!email.isEmpty()){
             presenter.sendPasswordRecover(email)
         }else{
-            toast(this,"ingrese un correo")
+            toast(this,"Ingrese un correo")
         }
     }
 
     override fun navigationToLogin() {
-        toast(this,"se envio un a su correo un enlace para restablecer su contraseña")
+        toast(this,"Se envió un a su correo un enlace para restablecer su contraseña")
         startActivity(Intent(this,MainActivity::class.java ))
         finish()
     }
