@@ -10,7 +10,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.umss.awichu.R
 import com.umss.awichu.databinding.ActivityMenuLateralBinding
 
@@ -40,6 +39,9 @@ class MenuLateralActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        //val cal: Button = findViewById(R.id.cal)
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
