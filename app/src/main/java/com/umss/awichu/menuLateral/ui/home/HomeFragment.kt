@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
 
 
         return root
+
     }
 
     override fun onDestroyView() {
