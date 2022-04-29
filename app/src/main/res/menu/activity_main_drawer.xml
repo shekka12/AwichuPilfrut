@@ -22,8 +22,5 @@
                 android:id="@+id/acercaDe"
                 android:title="@string/acerca_deLatera"/>
 
-       <item
-           android:id="@+id/mainActivity"
-           android:title="Cerrar Sesión"/>
     </group>
 </menu>
