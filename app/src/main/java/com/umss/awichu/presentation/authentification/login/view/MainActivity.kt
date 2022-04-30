@@ -7,10 +7,14 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.loginInteractor.SignInInteractorImpl
 import com.umss.awichu.menuLateral.MenuLateralActivity
+import com.umss.awichu.menuLateral.ui.home.HomeFragment
 import com.umss.awichu.presentation.authentification.login.LoginContract
 import com.umss.awichu.presentation.authentification.login.presenter.LoginPresenter
 import com.umss.awichu.presentation.authentification.passwordRecover.view.PasswordRecoverActivity
@@ -27,7 +31,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
     private var mIsShowPass = false
 
     lateinit var presenter: LoginContract.LoginPresenter
-
+    val mAuth = FirebaseAuth.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -128,7 +132,14 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
         presenter.dettachView()
         presenter.dettachJob()
     }
-
+    override fun onStart() {
+        val user = Firebase.auth.currentUser
+        if(user != null){
+            startActivity(Intent(this, MenuLateralActivity::class.java))
+            finish()
+        }
+        super.onStart()
+    }
 
 
 }
