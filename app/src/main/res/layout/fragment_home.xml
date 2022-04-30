@@ -6,7 +6,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#A3EBB1"
+        android:background="@drawable/fondo1"
         tools:context=".menuLateral.ui.home.HomeFragment">
 
     <CalendarView
