@@ -16,7 +16,7 @@
         </item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.Awichu.Fullscreen" parent="Theme.Awichu">
+    <style name="Theme.Awichu.Fullscreen" parent="Theme.Awichu.NoActionBar">
         <item name="android:actionBarStyle">@style/Widget.Theme.Awichu.ActionBar.Fullscreen</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:windowBackground">@null</item>
