@@ -1,16 +1,26 @@
 package com.umss.awichu.presentation.authentification.registro.presenter
 
 import androidx.core.util.PatternsCompat
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.auth.User
+
 import com.umss.awichu.presentation.authentification.registro.registerInteractor.RegisterInteractor
 import com.umss.awichu.presentation.authentification.registro.RegisterContract
+
+import java.util.*
+
 
 class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContract.registerPresenter {
 
     var view: RegisterContract.registerView? = null
     var registerInteractor: RegisterInteractor? = null
+    var mDatabase = FirebaseDatabase.getInstance().reference
+    var mAuth = FirebaseAuth.getInstance()
     init{
         this.registerInteractor = registerInteractor
     }
+
 
     override fun attachView(view: RegisterContract.registerView) {
         this.view = view
@@ -50,10 +60,13 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
         return password1 == passworod2
     }
 
-    override fun signUp(fullname: String, email: String, password1: String) {
+    override fun signUp(fullname: String, email: String,lastname: String, password1: String) {
         view?.Showprogress()
         registerInteractor?.signUp(fullname,email, password1, object: RegisterInteractor.registerCallBack{
             override fun onRegisterSucces() {
+                val userId: String = mAuth.currentUser!!.uid
+                writeNewUser(fullname, email, userId, lastname)
+                //mDatabase.child("users").child(userId)
                 view?.navigateToMain()
                 view?.HideProgress()
             }
@@ -65,5 +78,15 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
 
         })
     }
+    data class User(val username: String? = null,val lastname: String, val email: String? = null) {
+        // Null default values create a no-argument default constructor, which is needed
+        // for deserialization from a DataSnapshot.
+    }
+
+    fun writeNewUser(fullname: String, email: String, userId: String, lastname: String) {
+        val user = User(fullname, lastname, email)
+        mDatabase.child("Users").child(userId).setValue(user)
+    }
+
 
 }

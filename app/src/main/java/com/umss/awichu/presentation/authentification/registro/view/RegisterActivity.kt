@@ -148,7 +148,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
             etx_passwordRegistro2.error = "Las contraseñas no coinciden"
             return
         }
-        presenter.signUp(fullname,email,password1)
+        presenter.signUp(fullname,email,lastname, password1)
     }
 
     override fun Showprogress() {
