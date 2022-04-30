@@ -23,7 +23,7 @@ interface RegisterContract {
         fun checkValidEmailDomain(email: String): Boolean
         fun checkValidPassword(password1: String, passworod2:String): Boolean
         fun checkPasswordMatch(password1: String, passworod2:String): Boolean
-        fun signUp(fullname: String, email: String, password1: String)
+        fun signUp(fullname: String, email: String, lastname: String, password1: String)
 
 
     }

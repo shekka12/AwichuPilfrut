@@ -12,6 +12,7 @@
             tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_nav_home_to_nav_slideshow" app:destination="@id/nav_slideshow"/>
         <action android:id="@+id/goBackToLogin" app:destination="@id/mainActivity"/>
+        <action android:id="@+id/gotoAdministrar" app:destination="@id/administrarPerfil"/>
     </fragment>
 
     <fragment

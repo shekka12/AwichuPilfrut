@@ -20,7 +20,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView6" android:layout_marginTop="12dp"
-            android:background="#FFFFFF" android:text="Falta conexión a la base de datos"/>
+            android:background="#FFFFFF" />
+           //android:text=""
+            />
     <TextView
             android:id="@+id/text_slideshow3"
             android:layout_width="match_parent"
@@ -46,8 +48,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            android:layout_marginTop="12dp" android:background="#FFFFFF"
-            android:text="Falta conexión a la base de datos"/>
+            android:layout_marginTop="12dp" android:background="#FFFFFF"/>
     <TextView
             android:id="@+id/text_slideshow4"
             android:layout_width="match_parent"
