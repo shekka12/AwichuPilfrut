@@ -142,7 +142,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="38dp"
 				android:id="@+id/progressBar_singIn"
-				android:elevation="2dp"
+				android:elevation="4dp"
 				android:visibility="gone"
 				app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
 				android:layout_marginTop="24dp" app:layout_constraintEnd_toEndOf="parent"
