@@ -21,7 +21,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="18dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -93,7 +93,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="52dp"/>
     <TextView
             android:text="Nombre"
             android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
             android:layout_marginStart="9dp"
             android:textSize="20sp"/>
     <TextView
-            android:text="Carnet de identidad"
+            android:text="CI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView10"
@@ -155,6 +155,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView11"
             app:layout_constraintTop_toBottomOf="@+id/text_slideshow4"
+
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -165,3 +166,4 @@
             android:textSize="20sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
+
