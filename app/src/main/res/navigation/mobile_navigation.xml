@@ -13,6 +13,8 @@
         <action android:id="@+id/action_nav_home_to_nav_slideshow" app:destination="@id/nav_slideshow"/>
         <action android:id="@+id/goBackToLogin" app:destination="@id/mainActivity"/>
         <action android:id="@+id/gotoAdministrar" app:destination="@id/administrarPerfil"/>
+        <action android:id="@+id/confi" app:destination="@id/botonConfiguracion"/>
+        <action android:id="@+id/recor" app:destination="@id/botonRecordatorios"/>
     </fragment>
 
     <fragment
@@ -39,4 +41,8 @@
             android:name="com.umss.awichu.menuLateral.ui.acercade.AcercaDe"
             android:label="Acerca de"
             tools:layout="@layout/fragment_acerca_de"/>
+    <fragment android:id="@+id/botonConfiguracion" android:name="com.umss.awichu.botonesInferiores.botonConfiguracion"
+              android:label="fragment_boton_configuracion" tools:layout="@layout/fragment_boton_configuracion"/>
+    <fragment android:id="@+id/botonRecordatorios" android:name="com.umss.awichu.botonesInferiores.BotonRecordatorios"
+              android:label="fragment_boton_recordatorios" tools:layout="@layout/fragment_boton_recordatorios"/>
 </navigation>
