@@ -34,7 +34,15 @@ class HomeFragment : Fragment() {
 
         return root
     }
-
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        imageButton.setOnClickListener{
+            findNavController().navigate(R.id.recor)
+        }
+        imageButton2.setOnClickListener{
+            findNavController().navigate(R.id.confi)
+        }
+        super.onViewStateRestored(savedInstanceState)
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
