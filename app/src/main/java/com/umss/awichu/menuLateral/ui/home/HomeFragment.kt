@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.umss.awichu.R
 import com.umss.awichu.databinding.FragmentHomeBinding
+import kotlinx.android.synthetic.main.fragment_boton_recordatorios.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -36,10 +37,10 @@ class HomeFragment : Fragment() {
     }
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
         imageButton.setOnClickListener{
-            findNavController().navigate(R.id.recor)
+            findNavController().navigate(R.id.confi)
         }
         imageButton2.setOnClickListener{
-            findNavController().navigate(R.id.confi)
+            findNavController().navigate(R.id.recor)
         }
         super.onViewStateRestored(savedInstanceState)
     }

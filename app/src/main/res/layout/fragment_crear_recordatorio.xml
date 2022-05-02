@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollViewP"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo1"
+            tools:context=".menuLateral.ui.slideshow.SlideshowFragment">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Recordatorio"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/textView12"/>
+        <TextView
+                android:text="Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.083"/>
+        <TextView
+                android:id="@+id/text_slideshow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:background="#FFFFFF"
+                android:text=""
+                app:layout_constraintTop_toBottomOf="@+id/textView15" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="30dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp" app:layout_constraintHorizontal_bias="0.0"/>
+        <TextView
+                android:text="Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/text_slideshow5"
+                android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.08"/>
+        <TextView
+                android:text="Hora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_slideshow5" android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/textView16" app:layout_constraintHorizontal_bias="0.424"/>
+        <EditText
+                android:layout_width="133dp"
+                android:layout_height="45dp"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/editTextDate"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/white"
+                android:minHeight="40dp"
+        />
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="43dp"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editTextTime"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:minHeight="40dp" app:layout_constraintStart_toEndOf="@+id/editTextDate"
+                app:layout_constraintHorizontal_bias="0.377"/>
+        <TextView
+                android:text="Descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTime" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
+                app:layout_constraintHorizontal_bias="0.089"/>
+        <EditText
+                android:layout_width="336dp"
+                android:layout_height="227dp"
+                android:inputType="textMultiLine"
+                android:gravity="start|top"
+                android:ems="10"
+                android:id="@+id/editTextTextMultiLine"
+                android:background="@color/white" android:minHeight="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                app:layout_constraintHorizontal_bias="0.497"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

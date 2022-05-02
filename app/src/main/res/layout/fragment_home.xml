@@ -34,10 +34,14 @@
     <ImageButton
             android:src="@drawable/botonconfiguracion1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/imageButton"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintHorizontal_bias="0.612" app:layout_constraintVertical_bias="0.27"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintHorizontal_bias="0.612"
+            app:layout_constraintVertical_bias="0.27"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" android:background="#00A3EBB1"/>
     <ImageButton
             android:src="@drawable/botonrecordatorio2"
