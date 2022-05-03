@@ -69,22 +69,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginTop="12dp"
             android:background="#FFFFFF" android:text="Falta conexión a la base de datos"/>
-    <TextView
-            android:id="@+id/text_slideshow5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
-            android:background="#FFFFFF"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="260dp"
-            android:layout_marginStart="12dp"
-            android:text="Cuidador" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.0" android:layout_marginBottom="32dp"/>
     <ImageView
             android:src="@drawable/perfil"
             android:layout_width="wrap_content"
@@ -145,21 +129,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.03"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/black"
-            android:layout_marginStart="9dp"
-            android:textSize="20sp"/>
-    <TextView
-            android:text="Tipo de perfil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/text_slideshow4"
-
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
             android:layout_marginStart="9dp"

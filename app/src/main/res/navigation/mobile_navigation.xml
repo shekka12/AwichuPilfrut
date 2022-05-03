@@ -41,8 +41,18 @@
             android:name="com.umss.awichu.menuLateral.ui.acercade.AcercaDe"
             android:label="Acerca de"
             tools:layout="@layout/fragment_acerca_de"/>
-    <fragment android:id="@+id/botonConfiguracion" android:name="com.umss.awichu.botonesInferiores.botonConfiguracion"
-              android:label="fragment_boton_configuracion" tools:layout="@layout/fragment_boton_configuracion"/>
-    <fragment android:id="@+id/botonRecordatorios" android:name="com.umss.awichu.botonesInferiores.BotonRecordatorios"
-              android:label="fragment_boton_recordatorios" tools:layout="@layout/fragment_boton_recordatorios"/>
+    <fragment
+            android:id="@+id/botonConfiguracion"
+            android:name="com.umss.awichu.botonesInferiores.botonConfiguracion"
+            android:label="Configuración" tools:layout="@layout/fragment_boton_configuracion"/>
+    <fragment
+            android:id="@+id/botonRecordatorios"
+            android:name="com.umss.awichu.botonesInferiores.BotonRecordatorios"
+            android:label="Recordatorios" tools:layout="@layout/fragment_boton_recordatorios">
+        <action android:id="@+id/crear4" app:destination="@id/crearRecordatorio"/>
+    </fragment>
+    <fragment
+            android:id="@+id/crearRecordatorio"
+            android:name="com.umss.awichu.botonesInferiores.crearRecordatorio"
+            android:label="Crear Recordatorio" tools:layout="@layout/fragment_crear_recordatorio"/>
 </navigation>

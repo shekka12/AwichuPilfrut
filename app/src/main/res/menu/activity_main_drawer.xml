@@ -8,9 +8,7 @@
         <item
                 android:id="@+id/nav_slideshow"
                 android:title="Mi perfil"/>
-        <item
-            android:id="@+id/administrarPerfil"
-            android:title="Administrar Perfil"/>
+
         <item
                 android:id="@+id/nav_home"
                 android:title="@string/crear_recordatorio"/>
