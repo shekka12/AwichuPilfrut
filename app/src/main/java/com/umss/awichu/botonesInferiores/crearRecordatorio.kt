@@ -14,7 +14,7 @@ class crearRecordatorio : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_crear_recordatorio, container, false)
+        return inflater.inflate(R.layout.activity_create_remind, container, false)
     }
 
 
