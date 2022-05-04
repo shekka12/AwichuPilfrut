@@ -1,6 +1,5 @@
 package com.umss.awichu.menuLateral
 
-import android.app.AlertDialog.Builder
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -14,7 +13,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.umss.awichu.R
 import com.umss.awichu.databinding.ActivityMenuLateralBinding
@@ -34,7 +32,6 @@ class MenuLateralActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMenuLateral.toolbar)
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -80,6 +77,7 @@ class MenuLateralActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_menu_lateral)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
     fun navigateToLogin() {
         val intentLogin = Intent(this, MainActivity::class.java)
         intentLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

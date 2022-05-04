@@ -35,7 +35,8 @@
     <activity
             android:id="@+id/mainActivity"
             android:name="com.umss.awichu.presentation.authentification.login.view.MainActivity"
-            android:label="activity_main" tools:layout="@layout/activity_main"/>
+            android:label="activity_main"
+            tools:layout="@layout/activity_main"/>
     <fragment
             android:id="@+id/acercaDe"
             android:name="com.umss.awichu.menuLateral.ui.acercade.AcercaDe"
@@ -44,15 +45,20 @@
     <fragment
             android:id="@+id/botonConfiguracion"
             android:name="com.umss.awichu.botonesInferiores.botonConfiguracion"
-            android:label="Configuración" tools:layout="@layout/fragment_boton_configuracion"/>
+            android:label="Configuración"
+            tools:layout="@layout/fragment_boton_configuracion"/>
     <fragment
             android:id="@+id/botonRecordatorios"
             android:name="com.umss.awichu.botonesInferiores.BotonRecordatorios"
-            android:label="Recordatorios" tools:layout="@layout/fragment_boton_recordatorios">
-        <action android:id="@+id/crear4" app:destination="@id/crearRecordatorio"/>
+            android:label="Recordatorios"
+            tools:layout="@layout/fragment_boton_recordatorios">
+        <action android:id="@+id/crear4" app:destination="@id/CreateRemindd"/>
     </fragment>
-    <fragment
-            android:id="@+id/crearRecordatorio"
-            android:name="com.umss.awichu.botonesInferiores.crearRecordatorio"
-            android:label="Crear Recordatorio" tools:layout="@layout/fragment_crear_recordatorio"/>
+
+    <activity
+            android:id="@+id/CreateRemindd"
+            android:name="com.umss.awichu.menuLateral.ui.recordatorios.CreateRemind"
+            android:label="activity_create_remind"
+            tools:layout="@layout/activity_create_remind"
+    />
 </navigation>
