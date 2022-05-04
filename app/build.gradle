@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+
+
 }
 
 android {
@@ -14,6 +16,8 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true //datepicker
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,6 +32,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
+        coreLibraryDesugaringEnabled true  //datepicker
+
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -59,6 +66,8 @@ dependencies {
     //firebase database
     implementation 'com.google.firebase:firebase-database'
 
+    implementation 'androidx.recyclerview:recyclerview:1.2.1' //note
+
 
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
@@ -67,6 +76,10 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:19.7.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
+
+
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_configuration:1.1.5'  //Date picker
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
