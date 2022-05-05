@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/scrollViewP"
+            android:id="@+id/scrollViewRecord"
             android:fillViewport="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
+
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/fondo1"
-            tools:context=".menuLateral.ui.slideshow.SlideshowFragment">
+            tools:context=".botonesInferiores.crearRecordatorio">
 
         <TextView
                 android:layout_width="wrap_content"
@@ -30,21 +34,28 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"/>
 
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="329dp"
-                android:layout_height="409dp"
-                android:background="#75E6DA"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19"
-                android:layout_marginTop="8dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp" app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="104dp">
-        </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
 
-        <ImageButton
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:listitem="@layout/item_rv"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            android:layout_marginTop="160dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="160dp"
+            app:layout_constraintVertical_bias="0.96"/>
+
+    <ImageButton
                 android:src="@android:drawable/ic_input_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,4 +79,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </ScrollView>

@@ -10,6 +10,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Awichu">
         <activity
+                android:name=".menuLateral.ui.recordatorios.AddNote"
+                android:exported="true"/>
+        <activity
                 android:name=".menuLateral.ui.recordatorios.CreateRemind"
                 android:exported="true"/>
         <activity
