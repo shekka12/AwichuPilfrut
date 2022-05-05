@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        multiDexEnabled true //datepicker
+        //multiDexEnabled true //datepicker
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,7 +33,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
 
-        coreLibraryDesugaringEnabled true  //datepicker
+        //coreLibraryDesugaringEnabled true  //datepicker
 
     }
     kotlinOptions {
@@ -66,7 +66,13 @@ dependencies {
     //firebase database
     implementation 'com.google.firebase:firebase-database'
 
-    implementation 'androidx.recyclerview:recyclerview:1.2.1' //note
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'
+
 
 
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
@@ -79,7 +85,7 @@ dependencies {
 
 
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_configuration:1.1.5'  //Date picker
+    //coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_configuration:1.1.5'  //Date picker
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
