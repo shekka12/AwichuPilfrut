@@ -115,7 +115,7 @@ class RegisterActivity : BaseActivity(), RegisterContract.registerView {
 
 
         if(presenter.chechEmptyLastname(lastname)) {
-            etx_lastname.error = "ingrese un apellido"
+            etx_lastname.error = "Ingrese un apellido"
             return
         }else{
             if(lastname.length < 2 && lastname.length >= 1) {
