@@ -1,5 +1,7 @@
 package com.umss.awichu.presentation.authentification.login
 
+import android.content.Context
+
 interface LoginContract {
 
     interface loginView{
@@ -16,7 +18,7 @@ interface LoginContract {
         fun dettachView()
         fun dettachJob()
         fun isVIewAtached(): Boolean
-        fun signInUserWithEmailandPassword(email: String, passworw: String)
+        fun signInUserWithEmailandPassword(email: String, passworw: String, context: Context)
         fun checkEmptyEmail(email: String): Boolean
         fun checkEmptyPassword(passworw: String): Boolean
         fun checkValidEmailLogin(email: String):Boolean

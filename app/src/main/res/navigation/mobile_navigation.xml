@@ -52,13 +52,10 @@
             android:name="com.umss.awichu.botonesInferiores.BotonRecordatorios"
             android:label="Recordatorios"
             tools:layout="@layout/fragment_boton_recordatorios">
-        <action android:id="@+id/crear4" app:destination="@id/CreateRemindd"/>
+        <action android:id="@+id/gotoRe" app:destination="@id/remainActivity"/>
     </fragment>
+    <activity android:id="@+id/remainActivity"
+              android:name="com.umss.awichu.menuLateral.ui.recordatorios.RemainActivity"
+              android:label="RemainActivity"/>
 
-    <activity
-            android:id="@+id/CreateRemindd"
-            android:name="com.umss.awichu.menuLateral.ui.recordatorios.CreateRemind"
-            android:label="activity_create_remind"
-            tools:layout="@layout/activity_create_remind"
-    />
 </navigation>

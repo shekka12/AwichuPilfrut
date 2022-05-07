@@ -1,5 +1,6 @@
 package com.umss.awichu.presentation.authentification.passwordRecover
 
+import android.content.Context
 import android.provider.ContactsContract.CommonDataKinds.Email
 
 interface passwordRecoverContract {
@@ -16,7 +17,7 @@ interface passwordRecoverContract {
         fun dettachView()
         fun dettachJob()
         fun isViewAttached(): Boolean
-        fun sendPasswordRecover(email: String)
+        fun sendPasswordRecover(email: String, context: Context)
 
 
 

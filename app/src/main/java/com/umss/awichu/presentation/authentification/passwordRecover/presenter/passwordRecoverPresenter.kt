@@ -1,5 +1,6 @@
 package com.umss.awichu.presentation.authentification.passwordRecover.presenter
 
+import android.content.Context
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.passwordRecoverInteractor.passwordRecover
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.passwordRecoverInteractor.passwordRecoverImpl
 import com.umss.awichu.presentation.authentification.passwordRecover.exception.passwordRecoverException
@@ -37,16 +38,15 @@ class passwordRecoverPresenter(paswordRecoverInteractor: passwordRecover): passw
         return view != null
     }
 
-    override fun sendPasswordRecover(email: String) {
+    override fun sendPasswordRecover(email: String, context: Context) {
         launch {
             try {
                 view?.showProgress()
-                paswordRecoverInteractor?.sendPassWordResetEmail(email)
+                paswordRecoverInteractor?.sendPassWordResetEmail(email, context)
                 view?.hideProgress()
                 view?.navigationToLogin()
             }catch (e:passwordRecoverException){
                 view?.hideProgress()
-                view?.showError(e.message)
             }
         }
     }
