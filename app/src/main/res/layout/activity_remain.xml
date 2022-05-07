@@ -42,7 +42,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.083"/>
         <EditText
-                android:id="@+id/text_slideshow5"
+                android:id="@+id/etx_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -55,7 +55,8 @@
                 android:layout_marginStart="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="30dp"
-                app:layout_constraintHorizontal_bias="0.0"/>
+                app:layout_constraintHorizontal_bias="0.0" android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"/>
         <TextView
                 android:text="Fecha"
                 android:textStyle="bold"
@@ -64,7 +65,7 @@
                 android:id="@+id/textView16"
                 android:textColor="@color/black"
                 android:textSize="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/text_slideshow5"
+                app:layout_constraintTop_toBottomOf="@+id/etx_title"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +79,7 @@
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_slideshow5"
+                app:layout_constraintTop_toBottomOf="@+id/etx_title"
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@+id/textView16"
                 app:layout_constraintHorizontal_bias="0.424"/>
@@ -141,7 +142,9 @@
                 android:inputType="textMultiLine"
                 android:gravity="start|top"
                 android:ems="10"
-                android:id="@+id/noteEditText"
+                android:id="@+id/etx_NoteDescription"
+                android:maxLength="100"
+                android:digits="0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ,;:. "
                 android:hint="Agrega tu recordatorio aqui"
                 android:background="@color/white"
                 android:minHeight="48dp"
@@ -149,29 +152,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="8dp"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.0"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp" tools:ignore="SpeakableTextPresentCheck"/>
         <Button
-                android:text="Cancelar"
+                android:hint="Cancelar"
+                android:textColorHint="@color/white"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonCancelRemind"
-                android:backgroundTint="#116530"
-                android:textSize="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/noteEditText"
+                android:id="@+id/btn_goToBack"
+                android:backgroundTint="#18a558"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/etx_NoteDescription"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="80dp"
                 android:layout_marginStart="32dp"/>
         <Button
-                android:text="Guardar"
+                android:hint="Guardar"
+                android:textColorHint="@color/white"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/addNoteButton"
-                android:backgroundTint="#05445E"
-                android:textSize="16dp"
+                android:id="@+id/btn_saveRemain"
+                android:backgroundTint="#189ab4"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/noteEditText"
+                app:layout_constraintTop_toBottomOf="@+id/etx_NoteDescription"
                 android:layout_marginEnd="28dp"
                 android:layout_marginTop="80dp"/>
 

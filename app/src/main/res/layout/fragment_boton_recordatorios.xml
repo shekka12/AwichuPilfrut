@@ -48,34 +48,41 @@
             tools:listitem="@layout/item_rv"
 
             app:layout_constraintTop_toBottomOf="@+id/textView12"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="200dp"
             app:layout_constraintHorizontal_bias="1.0"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="160dp"
             app:layout_constraintVertical_bias="0.96"/>
 
-    <ImageButton
-                android:src="@android:drawable/ic_input_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton3"
-                app:layout_constraintTop_toBottomOf="@+id/textView12"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" android:background="#00A3EBB1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.818"
-                android:layout_marginTop="16dp" android:minWidth="48dp" android:minHeight="48dp"
-                android:tint="@color/black"/>
+
         <TextView
                 android:text="Añadir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textStyle="bold"
+                android:textSize="25dp"
                 android:id="@+id/textView19"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" app:layout_constraintHorizontal_bias="0.821"/>
+                app:layout_constraintTop_toBottomOf="@+id/imageButton3" app:layout_constraintHorizontal_bias="0.877"
+                android:layout_marginTop="12dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/simbolo_add_24"
+                android:tint="#000000"
+                android:id="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:background="#00A3EBB1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                android:layout_marginTop="16dp"
+                android:minWidth="80dp"
+                android:minHeight="60dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

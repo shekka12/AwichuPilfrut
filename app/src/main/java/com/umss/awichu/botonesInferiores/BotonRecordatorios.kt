@@ -10,17 +10,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.umss.awichu.R
-import com.umss.awichu.databinding.FragmentHomeBinding
-import com.umss.awichu.menuLateral.ui.home.HomeViewModel
-import kotlinx.android.synthetic.*
+
 import kotlinx.android.synthetic.main.fragment_boton_recordatorios.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 class BotonRecordatorios : Fragment() {
 
-    //private lateinit var recyclerView: RecyclerView
-    //private lateinit var imageButton: ImageButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,10 +28,11 @@ class BotonRecordatorios : Fragment() {
 
 
     }
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         imageButton3.setOnClickListener{
-            findNavController().navigate(R.id.crear4)
+            findNavController().navigate(R.id.gotoRe)
         }
-        super.onViewStateRestored(savedInstanceState)
     }
 }

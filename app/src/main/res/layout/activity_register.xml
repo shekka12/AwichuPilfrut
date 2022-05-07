@@ -186,14 +186,15 @@
                 android:hint="@string/correo_electronico"
                 android:inputType="textEmailAddress"
                 android:minHeight="40dp"
+                android:maxLength="50"
+                android:digits="0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ@_-."
                 android:textColorLink="@color/teal_200"
                 android:textColorHighlight="@color/teal_700"
                 tools:ignore="Autofill,TouchTargetSizeCheck"
                 android:background="@color/white"
                 android:textAllCaps="false"
-                android:textSize="16dp"
+                android:textSize="16dp"/>
 
-        />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

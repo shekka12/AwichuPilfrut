@@ -66,7 +66,6 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
             override fun onRegisterSucces() {
                 val userId: String = mAuth.currentUser!!.uid
                 writeNewUser(fullname, email, userId, lastname)
-                //mDatabase.child("users").child(userId)
                 view?.navigateToMain()
                 view?.HideProgress()
             }
@@ -87,6 +86,5 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
         val user = User(fullname, lastname, email)
         mDatabase.child("Users").child(userId).setValue(user)
     }
-
 
 }

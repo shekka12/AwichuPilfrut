@@ -1,5 +1,7 @@
 package com.umss.awichu.presentation.authentification.login.presenter
 
+import android.content.Context
+import android.widget.Toast
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.loginInteractor.SignInInteractor
 import com.umss.awichu.presentation.authentification.login.LoginContract
 import com.umss.awichu.presentation.authentification.login.exception.FirebaseLoginException
@@ -36,18 +38,17 @@ class LoginPresenter(signInInteractor: SignInInteractor): LoginContract.LoginPre
         return view != null
     }
 
-    override fun signInUserWithEmailandPassword(email: String, passworw: String) {
+    override fun signInUserWithEmailandPassword(email: String, passworw: String, context: Context) {
 
         launch {
             view?.showProgressBar()
             try{
-                signInInteractor?.SignInWithEmailAndPassword(email, passworw)
+                signInInteractor?.SignInWithEmailAndPassword(email, passworw, context)
                 if (isVIewAtached()){
                      view?.hideProgreseDialog()
                      view?.navigateMain()
                      }
             }catch (e: FirebaseLoginException){
-                view?.showError(e.message)
                 view?.hideProgreseDialog()
             }
         }
