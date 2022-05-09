@@ -35,18 +35,21 @@
                 android:id="@+id/textViewNom"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCR"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.083"/>
+                app:layout_constraintHorizontal_bias="0.088"/>
         <EditText
                 android:id="@+id/etx_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textSize="20sp"
+                android:minHeight="48dp"
+                android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890"
+                android:maxLength="20"
                 android:background="#FFFFFF"
                 android:text=""
                 app:layout_constraintTop_toBottomOf="@+id/textViewNom"
@@ -55,7 +58,7 @@
                 android:layout_marginStart="30dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="30dp"
-                app:layout_constraintHorizontal_bias="0.0" android:minHeight="48dp"
+                app:layout_constraintHorizontal_bias="0.0"
                 tools:ignore="SpeakableTextPresentCheck"/>
         <TextView
                 android:text="Fecha"
@@ -64,12 +67,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView16"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/etx_title"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"/>
+                app:layout_constraintHorizontal_bias="0.084"/>
         <TextView
                 android:text="Hora"
                 android:textStyle="bold"
@@ -77,15 +80,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView17"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etx_title"
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@+id/textView16"
-                app:layout_constraintHorizontal_bias="0.424"/>
+                app:layout_constraintHorizontal_bias="0.431"/>
         <EditText
-                android:layout_width="133dp"
-                android:layout_height="45dp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
                 android:id="@+id/editTextDateP"
@@ -101,14 +104,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="8dp"
                 app:layout_constraintHorizontal_bias="0.0"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginEnd="100dp"
                 android:background="@color/white"
-                android:minHeight="40dp"
+                android:minHeight="48dp"
                 tools:ignore="TouchTargetSizeCheck"/>
         <EditText
                 android:layout_width="150dp"
-                android:layout_height="45dp"
+                android:layout_height="wrap_content"
                 android:inputType="time"
                 android:ems="10"
                 android:id="@+id/editTextTime"
@@ -121,8 +124,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView17"
                 app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
                 android:background="@color/white"
-                android:minHeight="40dp" app:layout_constraintStart_toEndOf="@+id/editTextDateP"
-                app:layout_constraintHorizontal_bias="0.377" tools:ignore="TouchTargetSizeCheck"/>
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextDateP"
+                app:layout_constraintHorizontal_bias="0.377"
+                tools:ignore="TouchTargetSizeCheck"/>
+
+
         <TextView
                 android:text="Descripcion"
                 android:textStyle="bold"
@@ -130,31 +137,47 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView18"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/editTextTime"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                app:layout_constraintHorizontal_bias="0.089"/>
-        <EditText
-                android:layout_width="330dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintHorizontal_bias="0.105"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:inputType="textMultiLine"
-                android:gravity="start|top"
-                android:ems="10"
-                android:id="@+id/etx_NoteDescription"
-                android:maxLength="100"
-                android:digits="0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ,;:. "
-                android:hint="Agrega tu recordatorio aqui"
-                android:background="@color/white"
-                android:minHeight="48dp"
-                app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:id="@+id/textInputLayoutDescription"
+                app:boxBackgroundMode="filled"
+                android:gravity="start"
+                android:elevation="3dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="8dp"
-                app:layout_constraintHorizontal_bias="0.0"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp" tools:ignore="SpeakableTextPresentCheck"/>
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:layout_marginTop="8dp" android:layout_marginStart="32dp" android:layout_marginEnd="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:ems="10"
+                    android:id="@+id/etx_NoteDescription"
+                    android:maxLength="100"
+                    android:digits="0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ,;:. "
+                    android:background="@color/white"
+                    android:minHeight="48dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+
+                    tools:ignore="SpeakableTextPresentCheck"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
                 android:hint="Cancelar"
                 android:textColorHint="@color/white"
@@ -163,10 +186,11 @@
                 android:id="@+id/btn_goToBack"
                 android:backgroundTint="#18a558"
                 android:textSize="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/etx_NoteDescription"
+
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDescription" android:layout_marginTop="80dp"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="80dp"
-                android:layout_marginStart="32dp"/>
+                android:layout_marginStart="40dp" app:layout_constraintEnd_toStartOf="@+id/btn_saveRemain"
+                android:layout_marginEnd="32dp"/>
         <Button
                 android:hint="Guardar"
                 android:textColorHint="@color/white"
@@ -175,10 +199,11 @@
                 android:id="@+id/btn_saveRemain"
                 android:backgroundTint="#189ab4"
                 android:textSize="20dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDescription" android:layout_marginTop="80dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etx_NoteDescription"
-                android:layout_marginEnd="28dp"
-                android:layout_marginTop="80dp"/>
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.937"
+                android:layout_marginEnd="40dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

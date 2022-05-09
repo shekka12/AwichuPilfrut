@@ -26,7 +26,7 @@ class DatePickerFragment (val listener: (day:Int, month:Int, year:Int) -> Unit):
 
         val picker = DatePickerDialog(activity as Context, this, year, month, day)
 
-        c.set(Calendar.YEAR, year - 10)
+        c.set(Calendar.YEAR, year)
         picker.datePicker.minDate = c.timeInMillis
         //c.set(Calendar.YEAR, year + 80) //Limite maximo para el datePicker
         //picker.datePicker.maxDate = c.timeInMillis

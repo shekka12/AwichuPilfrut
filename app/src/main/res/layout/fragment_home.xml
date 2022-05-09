@@ -41,8 +41,8 @@
             app:layout_constraintTop_toBottomOf="@+id/simpleDigitalClock" app:layout_constraintVertical_bias="0.154"/>
     <ImageButton
             android:src="@drawable/botonconfiguracion1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:id="@+id/imageButton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,23 +50,35 @@
             app:layout_constraintTop_toBottomOf="@+id/calendarView"
             app:layout_constraintHorizontal_bias="0.821"
             app:layout_constraintVertical_bias="0.377"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" android:background="#00A3EBB1"/>
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" android:background="#00A3EBB1"
+            android:layout_marginEnd="32dp" android:layout_marginStart="32dp" android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"/>
     <ImageButton
             android:src="@drawable/botonrecordatorio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/imageButton2"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/calendarView"
-            app:layout_constraintHorizontal_bias="0.216" app:layout_constraintVertical_bias="0.377"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" android:background="#00A3EBB1"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintHorizontal_bias="0.216"
+            app:layout_constraintVertical_bias="0.377"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+            android:background="#00A3EBB1" android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp" android:layout_marginBottom="32dp"/>
     <TextView
             android:text="Recordatorios"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView13"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView13"
+            android:textSize="20dp"
             app:layout_constraintTop_toBottomOf="@+id/imageButton2"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.187"
-            app:layout_constraintVertical_bias="0.157"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.234"
+            app:layout_constraintVertical_bias="0.152"
 
             android:textColor="#07CC2D"
             android:textStyle="bold"
@@ -74,10 +86,15 @@
     <TextView
             android:text="Configuración"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView14"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.874"
-            app:layout_constraintTop_toBottomOf="@+id/imageButton" app:layout_constraintVertical_bias="0.157"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView14"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.791"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            app:layout_constraintVertical_bias="0.152"
             android:textColor="#07CC2D"
             android:textStyle="bold"/>
 

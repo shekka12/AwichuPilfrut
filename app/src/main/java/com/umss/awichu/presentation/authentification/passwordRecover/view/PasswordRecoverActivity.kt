@@ -47,7 +47,7 @@ class PasswordRecoverActivity : BaseActivity(), passwordRecoverContract.Password
     }
 
     override fun recoverPassword() {
-        val email = etx_recoverPassword.text.trim().toString()
+        val email = etx_recoverPassword.text?.trim().toString() //de .text a .text?
         if (!email.isEmpty()){
             presenter.sendPasswordRecover(email, this)
         }else{
