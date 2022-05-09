@@ -1,27 +1,32 @@
 package com.umss.awichu.menuLateral.ui.recordatorios
 
+
+import androidx.recyclerview.widget.RecyclerView
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.firebase.ui.firestore.FirestoreRecyclerAdapter
-import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.umss.awichu.R
 
-class RVAdaptor(options: FirestoreRecyclerOptions<Note>) : FirestoreRecyclerAdapter <Note, RVAdaptor.RVViewHolder>(
-    options
-) {
+class RVAdaptor : RecyclerView.Adapter<RVAdaptor.ViewHolder>() {
 
-    class RVViewHolder(intentView:View) : RecyclerView.ViewHolder(intentView){
-        val noteText: TextView = itemView.findViewById(R.id.noteText)
+    //fun RVAdaptor(notas:MutableList<>,context:Context){
+    // }
+
+    class ViewHolder(view: View): RecyclerView.ViewHolder(view){
+
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVViewHolder {
-        return RVViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_rv,parent,false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        TODO("Not yet implemented")
     }
 
-    override fun onBindViewHolder(holder: RVViewHolder, position: Int, model: Note) {
-        holder.noteText.text = model.text
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        TODO("Not yet implemented")
     }
+
+    override fun getItemCount(): Int {
+        TODO("Not yet implemented")
+    }
+
 }

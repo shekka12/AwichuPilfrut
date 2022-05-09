@@ -10,17 +10,42 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_remain.*
 import kotlinx.android.synthetic.main.activity_remain.editTextDateP
 import kotlinx.android.synthetic.main.activity_remain.editTextTime
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import android.app.TimePickerDialog
+import android.widget.TimePicker
+import java.util.*
+
+//import java.time.format.DateTimeFormatter
+
 
 class RemainActivity : AppCompatActivity() {
 
     private lateinit var remainNote: NoteDao
+
+    var timeformate = SimpleDateFormat("hh:mm a", Locale.ENGLISH)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_remain)
 
         editTextDateP.setOnClickListener{showDatePickerDialog()}
-        editTextTime.setOnClickListener{showTimePickerDialog()}
+        //editTextTime.setOnClickListener{showTimePickerDialog()} //Ya no se emplea
+
+        //Prueba time
+        editTextTime.setOnClickListener{
+            val now = Calendar.getInstance()
+            val timePicker = TimePickerDialog (this, TimePickerDialog.OnTimeSetListener{ view, hourOfDay, minute ->
+                val selectedTime = Calendar.getInstance()
+                selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                selectedTime.set(Calendar.MINUTE, minute)
+                editTextTime.setText(timeformate.format(selectedTime.time))
+            },
+                now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), true)
+
+            timePicker.show()
+        }
+        //
 
         btn_saveRemain.setOnClickListener{
             createRemainUser()
@@ -32,15 +57,15 @@ class RemainActivity : AppCompatActivity() {
         }
     }
 
-    private fun showTimePickerDialog() {
-        val timePicker = TimePickerFragment {onTimeSelected(it)}
+    //private fun showTimePickerDialog() {
+        //val timePicker = TimePickerFragment {onTimeSelected(it)}
+      //  timePicker.show(supportFragmentManager, "time")
+    //}
 
-        timePicker.show(supportFragmentManager, "time")
-    }
-
-    private fun onTimeSelected(time:String){
-        editTextTime.setText("$time")
-    }
+    //private fun onTimeSelected(time:String){
+        //editTextTime.setText("$time")
+      //  editTextTime.setText ("$time")
+    //}
 
     private fun showDatePickerDialog() {
         val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
@@ -67,7 +92,7 @@ class RemainActivity : AppCompatActivity() {
 
         if(fecha.isNotEmpty() && hora.isNotEmpty() && note.isNotEmpty()){
             remainNote.addNote(note, fecha, hora, nombre)
-            Toast.makeText(this, "Se Guardo exitosamente", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Recordatorio creado exitosamente", Toast.LENGTH_LONG).show()
 
         }
         else{
