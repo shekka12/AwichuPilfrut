@@ -8,34 +8,28 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-
             android:theme="@style/Theme.Awichu">
+        <activity
+                android:name=".botonesInferiores.editarPerfil"
+                android:exported="true"/>
         <activity
                 android:name=".menuLateral.MenuLateralActivity"
                 android:exported="true"
                 android:label="@string/title_activity_menu_lateral"
-
                 android:screenOrientation="portrait"
-
                 android:theme="@style/Theme.Awichu.NoActionBar"/>
         <activity
                 android:name=".presentation.authentification.passwordRecover.view.PasswordRecoverActivity"
-
-                android:screenOrientation="portrait"
-
-                android:exported="true"/>
+                android:exported="true"
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".presentation.authentification.registro.view.RegisterActivity"
-
-                android:screenOrientation="portrait"
-
-                android:exported="true"/>
+                android:exported="true"
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".presentation.main1.view.MainAwichuActivity"
-
-                android:screenOrientation="portrait"
-
-                android:exported="true"/>
+                android:exported="true"
+                android:screenOrientation="portrait"/>
         <activity
                 android:name=".presentation.main1.view.mainAwichuActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
@@ -44,10 +38,8 @@
                 android:theme="@style/Theme.Awichu.Fullscreen"/>
         <activity
                 android:name=".presentation.authentification.login.view.MainActivity"
-
-                android:screenOrientation="portrait"
-
-                android:exported="true">
+                android:exported="true"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

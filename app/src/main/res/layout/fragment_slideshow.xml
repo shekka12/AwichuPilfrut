@@ -134,9 +134,11 @@
             android:layout_marginStart="9dp"
             android:textSize="20sp"/>
     <Button
-            android:text="Button"
+            android:text="Editar Perfil"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonED"
+            android:backgroundTint="#4CAF50"
             app:layout_constraintTop_toBottomOf="@+id/text_slideshow4" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="36dp"
             app:layout_constraintHorizontal_bias="0.498"/>
