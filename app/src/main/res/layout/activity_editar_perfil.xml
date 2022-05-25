@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollViewP"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo1"
+            tools:context=".menuLateral.ui.slideshow.SlideshowFragment">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar Perfil"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/textView12"/>
+        <EditText
+                android:layout_width="303dp"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLength="14"
+                android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+                android:id="@+id/txtNombre"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.425" app:layout_constraintTop_toBottomOf="@+id/textView11"
+                android:layout_marginTop="8dp"
+                android:background="#FFFFFF"
+                android:hint="Nombre"/>
+        <EditText
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:maxLength="14"
+                android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+                android:id="@+id/txtApellido"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="4dp"
+                app:layout_constraintHorizontal_bias="0.414" android:background="#FFFFFF" android:hint="Apellido"/>
+        <EditText
+                android:layout_width="303dp"
+                android:layout_height="48dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:maxLength="8"
+                android:digits="0123456789"
+                android:id="@+id/txtCelular"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView21" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="12dp"
+                app:layout_constraintHorizontal_bias="0.407" android:background="#FFFFFF" android:hint="Celular"/>
+        <TextView
+                android:text="Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                app:layout_constraintHorizontal_bias="0.136"/>
+        <TextView
+                android:text="Apellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp" app:layout_constraintHorizontal_bias="0.136"/>
+        <TextView
+                android:text="Celular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView21"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/txtApellido"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp" app:layout_constraintHorizontal_bias="0.133"/>
+        <TextView
+                android:text="CI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/txtCelular" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp"
+                app:layout_constraintHorizontal_bias="0.123"/>
+        <EditText
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:inputType="phone"
+                android:ems="10"
+                android:maxLength="8"
+                android:digits="0123456789"
+                android:id="@+id/txtCarnet"
+                android:textAllCaps="false"
+                android:textSize="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="#FFFFFF"
+                android:minHeight="48dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintHorizontal_bias="0.414"
+                android:hint="Carnet de identidad"/>
+        <Button
+                android:text="@string/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnGuardar"
+                app:layout_constraintTop_toBottomOf="@+id/txtCarnet" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="28dp"
+                android:backgroundTint="#4CAF50"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

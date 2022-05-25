@@ -6,11 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.umss.awichu.R
+import com.umss.awichu.databinding.FragmentSlideshowBinding
+import kotlinx.android.synthetic.main.fragment_slideshow.*
 import com.umss.awichu.databinding.FragmentSlideshowBinding
 import kotlinx.android.synthetic.main.fragment_slideshow.*
 
@@ -64,5 +68,12 @@ class SlideshowFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        buttonED.setOnClickListener{
+            findNavController().navigate(R.id.edit)
+        }
+        super.onViewStateRestored(savedInstanceState)
     }
 }
