@@ -5,24 +5,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_remain"
+        app:cardBackgroundColor="#226C9D"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
         >
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_margin="20dp">
+
 
         <TextView
-                android:id="@+id/noteText"
-                android:layout_width="0dp"
+                android:id="@+id/etx_nameItem"
+                android:layout_width="match_parent"
+                android:text="Nombre"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" tools:ignore="MissingConstraints"/>
+
+        <TextView
+                android:id="@+id/etx_dateItem"
+                android:layout_width="match_parent"
+                android:text="Fecha"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintLeft_toRightOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/etx_nameItem"/>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                tools:layout_editor_absoluteY="58dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" tools:ignore="MissingConstraints"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

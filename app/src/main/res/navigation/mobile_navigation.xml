@@ -15,6 +15,8 @@
         <action android:id="@+id/gotoAdministrar" app:destination="@id/administrarPerfil"/>
         <action android:id="@+id/confi" app:destination="@id/botonConfiguracion"/>
         <action android:id="@+id/recor" app:destination="@id/botonRecordatorios"/>
+        <action android:id="@+id/gotoRemainRecycler" app:destination="@id/remainingListActivity"/>
+        <action android:id="@+id/wait" app:destination="@id/mainAwichuActivity"/>
     </fragment>
 
     <fragment
@@ -40,11 +42,6 @@
             android:label="activity_main"
             tools:layout="@layout/activity_main"/>
     <fragment
-            android:id="@+id/acercaDe"
-            android:name="com.umss.awichu.menuLateral.ui.acercade.AcercaDe"
-            android:label="Acerca de"
-            tools:layout="@layout/fragment_acerca_de"/>
-    <fragment
             android:id="@+id/botonConfiguracion"
             android:name="com.umss.awichu.botonesInferiores.botonConfiguracion"
             android:label="Configuración"
@@ -55,6 +52,8 @@
             android:label="Recordatorios"
             tools:layout="@layout/fragment_boton_recordatorios">
         <action android:id="@+id/gotoRe" app:destination="@id/remainActivity"/>
+        <action android:id="@+id/action_botonRecordatorios_to_remainingListActivity"
+                app:destination="@id/remainingListActivity"/>
     </fragment>
 
     <fragment
@@ -67,5 +66,11 @@
     <activity android:id="@+id/remainActivity"
               android:name="com.umss.awichu.menuLateral.ui.recordatorios.RemainActivity"
               android:label="RemainActivity"/>
+    <activity android:id="@+id/remainingListActivity"
+              android:name="com.umss.awichu.menuLateral.ui.recordatorios.models.RemainingListActivity"
+              android:label="activity_remaining_list" tools:layout="@layout/activity_remaining_list"/>
+    <activity android:id="@+id/mainAwichuActivity"
+              android:name="com.umss.awichu.presentation.main1.view.MainAwichuActivity"
+              android:label="activity_main_awichu" tools:layout="@layout/activity_main_awichu"/>
 
 </navigation>

@@ -15,7 +15,7 @@ class NoteDao {
 
     fun addNote(text: String, fechaRecordatorio: String, hora: String, nombre: String){
         val currentUserId = mAuth.currentUser!!.uid
-        val note = Note(text, currentUserId, fechaRecordatorio, hora, nombre)
+        val note = Note(text, fechaRecordatorio, hora, nombre)
         mDatabase.child("ListaDeRecordatorios").child(currentUserId).child(nombre).setValue(note)
     }
 

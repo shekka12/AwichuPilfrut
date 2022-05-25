@@ -47,6 +47,35 @@
         <entry key="..\:/proyectoIS/AWICHUU/Awichu/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/proyectoIS/AWICHUU/Awichu/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20364583333333333" />
         <entry key="..\:/proyectoIS/AWICHUU/Awichu/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.20364583333333333" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_baseline_adb_24.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_hide_password_24.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_menu_camera.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/ic_show_password_24.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/side_nav_bar.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/drawable/simbolo_add_24.xml" value="0.24953703703703703" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_add_note.xml" value="0.23055555555555557" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_crear_recordatorios.xml" value="0.22962962962962963" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_create_remind.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_main.xml" value="0.27816901408450706" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_menu_lateral.xml" value="0.2351851851851852" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_remain.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/activity_remaining_list.xml" value="0.31342592592592594" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/app_bar_menu_lateral.xml" value="0.31342592592592594" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/cardview.xml" value="0.31342592592592594" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/content_menu_lateral.xml" value="0.31342592592592594" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_acerca_de.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_administrar_perfil.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_boton_configuracion.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_boton_recordatorios.xml" value="0.33" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_fragmen_ayuda.xml" value="0.23842592592592593" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/fragment_slideshow.xml" value="0.1911231884057971" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/item_recordatorio.xml" value="0.2074074074074074" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/item_rv.xml" value="0.33" />
+        <entry key="..\:/proyectoIS/AWICHUU1.0/AwichuPilfrut/app/src/main/res/layout/nav_header_menu_lateral.xml" value="0.2351851851851852" />
       </map>
     </option>
   </component>
