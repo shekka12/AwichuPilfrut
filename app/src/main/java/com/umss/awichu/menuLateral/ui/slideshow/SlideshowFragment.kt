@@ -15,8 +15,7 @@ import com.google.firebase.database.ValueEventListener
 import com.umss.awichu.R
 import com.umss.awichu.databinding.FragmentSlideshowBinding
 import kotlinx.android.synthetic.main.fragment_slideshow.*
-import com.umss.awichu.databinding.FragmentSlideshowBinding
-import kotlinx.android.synthetic.main.fragment_slideshow.*
+
 
 
 class SlideshowFragment : Fragment() {
