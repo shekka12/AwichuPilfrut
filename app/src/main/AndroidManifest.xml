@@ -11,8 +11,6 @@
             android:theme="@style/Theme.Awichu">
         <activity
                 android:name=".menuLateral.ui.recordatorios.models.RemainingListActivity"
-                android:name=".botonesInferiores.editarPerfil"
-                android:name=".menuLateral.ui.recordatorios.RemainActivity"
                 android:exported="true"/>
         <activity
                 android:name=".menuLateral.ui.recordatorios.RemainActivity"

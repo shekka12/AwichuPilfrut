@@ -60,7 +60,7 @@ class RemainActivity : AppCompatActivity() {
 
 
     private fun showDatePickerDialog() {
-        val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}
+        val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month+1, year)}
         datePicker.show(supportFragmentManager, "datePicker")
     }
 

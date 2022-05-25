@@ -80,7 +80,7 @@
             app:layout_constraintHorizontal_bias="0.234"
             app:layout_constraintVertical_bias="0.152"
 
-            android:textColor="#07CC2D"
+            android:textColor="@color/white"
             android:textStyle="bold"
     />
     <TextView
@@ -95,7 +95,7 @@
             app:layout_constraintHorizontal_bias="0.791"
             app:layout_constraintTop_toBottomOf="@+id/imageButton"
             app:layout_constraintVertical_bias="0.152"
-            android:textColor="#07CC2D"
+            android:textColor="@color/white"
             android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
