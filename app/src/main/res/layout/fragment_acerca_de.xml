@@ -3,8 +3,17 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@drawable/acerca_de"
              tools:context=".menuLateral.ui.acercade.AcercaDe">
 
 
+    <TextView
+            android:text="Proximamente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewAviso"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+    />
 </FrameLayout>

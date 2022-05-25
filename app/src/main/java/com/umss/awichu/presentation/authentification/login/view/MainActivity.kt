@@ -3,10 +3,14 @@ package com.umss.awichu.presentation.authentification.login.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.text.BoringLayout
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.View
+import android.widget.CheckBox
 import android.widget.Toast
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -14,14 +18,15 @@ import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
 import com.umss.awichu.domain.interactorsCasosDuso.authentification.loginInteractor.SignInInteractorImpl
 import com.umss.awichu.menuLateral.MenuLateralActivity
-import com.umss.awichu.menuLateral.ui.home.HomeFragment
+
 import com.umss.awichu.presentation.authentification.login.LoginContract
 import com.umss.awichu.presentation.authentification.login.presenter.LoginPresenter
 import com.umss.awichu.presentation.authentification.passwordRecover.view.PasswordRecoverActivity
-import com.umss.awichu.presentation.main1.view.MainAwichuActivity
+
 import com.umss.awichu.presentation.authentification.registro.view.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.coroutines.delay
+
 
 /**creado por gabriel
  *
@@ -45,6 +50,8 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
 
         presenter = LoginPresenter(SignInInteractorImpl())
         presenter.attachView(this)
+
+
         btn_signIn.setOnClickListener {
             signIn()
         }
@@ -54,6 +61,9 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
         txt_recoverPassword.setOnClickListener{
             navigateToPasswordReset()
         }
+
+
+
 
     }
 
@@ -100,13 +110,17 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
                     toast(this, "ingrese una contraseña")
                 }
                 else{
-                    presenter.signInUserWithEmailandPassword(email, password)
+                    presenter.signInUserWithEmailandPassword(email, password, this)
+                    clear()
                 }
 
             }
         }
     }
-
+    private fun clear(){
+        etx_email.setText("")
+        etx_password.setText("")
+    }
     override fun navigateMain() {
         val intent = Intent(this,MenuLateralActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -123,6 +137,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
 
     override fun onDestroy() {
         super.onDestroy()
+
         presenter.dettachView()
         presenter.dettachJob()
     }
@@ -132,14 +147,23 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
         presenter.dettachView()
         presenter.dettachJob()
     }
-    override fun onStart() {
+
+
+
+
+    private fun sesionActiva(){
         val user = Firebase.auth.currentUser
-        if(user != null){
+        if(user != null ){
+
             startActivity(Intent(this, MenuLateralActivity::class.java))
             finish()
         }
-        super.onStart()
     }
 
+    override fun onStart() {
+        super.onStart()
+        sesionActiva()
+
+    }
 
 }

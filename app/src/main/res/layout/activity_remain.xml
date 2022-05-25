@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollViewRemind"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/fondo1"
+            tools:context=".menuLateral.ui.recordatorios.CreateRemind">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear Recordatorio"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/textViewCR"/>
+        <TextView
+                android:text="Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewNom"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCR"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.088"/>
+        <EditText
+                android:id="@+id/etx_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textSize="20sp"
+                android:minHeight="48dp"
+                android:digits="abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890"
+                android:maxLength="20"
+                android:background="#FFFFFF"
+                android:text=""
+                app:layout_constraintTop_toBottomOf="@+id/textViewNom"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                tools:ignore="SpeakableTextPresentCheck"/>
+        <TextView
+                android:text="Fecha"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView16"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/etx_title"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.084"/>
+        <TextView
+                android:text="Hora"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView17"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etx_title"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintHorizontal_bias="0.431"/>
+        <EditText
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/editTextDateP"
+
+                android:importantForAutofill="no"
+                android:focusable="false"
+                android:clickable="false"
+                android:hint="dd-mm-aaaa"
+                android:textAlignment="center"
+
+                app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="100dp"
+                android:background="@color/white"
+                android:minHeight="48dp"
+                tools:ignore="TouchTargetSizeCheck"/>
+        <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:ems="10"
+                android:id="@+id/editTextTime"
+
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="00:00"
+                android:textAlignment="center"
+
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextDateP"
+                app:layout_constraintHorizontal_bias="0.377"
+                tools:ignore="TouchTargetSizeCheck"/>
+
+
+        <TextView
+                android:text="Descripcion"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView18"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                app:layout_constraintHorizontal_bias="0.105"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:id="@+id/textInputLayoutDescription"
+                app:boxBackgroundMode="filled"
+                android:gravity="start"
+                android:elevation="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView18"
+                android:layout_marginTop="8dp" android:layout_marginStart="32dp" android:layout_marginEnd="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="start"
+                    android:textAlignment="textStart"
+                    android:ems="10"
+                    android:id="@+id/etx_NoteDescription"
+                    android:maxLength="100"
+                    android:digits="0123456789abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ,;:. "
+                    android:background="@color/white"
+                    android:minHeight="48dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+
+                    tools:ignore="SpeakableTextPresentCheck"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+                android:hint="Cancelar"
+                android:textColorHint="@color/white"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_goToBack"
+                android:backgroundTint="#18a558"
+                android:textSize="20dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDescription" android:layout_marginTop="80dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="40dp" app:layout_constraintEnd_toStartOf="@+id/btn_saveRemain"
+                android:layout_marginEnd="32dp"/>
+        <Button
+                android:hint="Guardar"
+                android:textColorHint="@color/white"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_saveRemain"
+                android:backgroundTint="#189ab4"
+                android:textSize="20dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDescription" android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.937"
+                android:layout_marginEnd="40dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

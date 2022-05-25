@@ -3,6 +3,10 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+    //view delete
+    id 'kotlin-kapt'
+    id 'realm-android'
+
 }
 
 android {
@@ -14,6 +18,8 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+
+        //multiDexEnabled true //datepicker
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -28,6 +34,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+
+        //coreLibraryDesugaringEnabled true  //datepicker
+
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -59,6 +68,17 @@ dependencies {
     //firebase database
     implementation 'com.google.firebase:firebase-database'
 
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'
+
+    //cardView
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
 
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
@@ -67,6 +87,10 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-database-ktx:19.7.0'
     implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
+
+
+
+    //coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs_configuration:1.1.5'  //Date picker
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

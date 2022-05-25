@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/scrollViewP"
+            android:id="@+id/scrollViewRecord"
             android:fillViewport="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
+
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/fondo1"
-            tools:context=".menuLateral.ui.slideshow.SlideshowFragment">
+            tools:context=".botonesInferiores.crearRecordatorio">
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mis Recordatorios"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
                 android:textSize="30dp"
                 android:textColor="@color/black"
                 android:layout_gravity="center"
@@ -24,36 +30,61 @@
                 android:layout_marginTop="28dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/textView12"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="329dp"
-                android:layout_height="409dp"
-                android:background="#75E6DA"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView19" android:layout_marginTop="8dp">
-        </LinearLayout>
-        <ImageButton
-                android:src="@android:drawable/ic_input_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton3"
-                app:layout_constraintTop_toBottomOf="@+id/textView12"
-                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" android:background="#00A3EBB1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.818"
-                android:layout_marginTop="16dp" android:minWidth="48dp" android:minHeight="48dp"
-                android:tint="@color/black"/>
+                android:id="@+id/textView12"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#75E6DA"
+
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:listitem="@layout/item_rv"
+
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            android:layout_marginTop="200dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="160dp"
+            app:layout_constraintVertical_bias="0.96"/>
+
+
         <TextView
                 android:text="Añadir"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25dp"
                 android:id="@+id/textView19"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" app:layout_constraintHorizontal_bias="0.821"/>
+                app:layout_constraintTop_toBottomOf="@+id/imageButton3" app:layout_constraintHorizontal_bias="0.877"
+                android:layout_marginTop="12dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/simbolo_add_24"
+                android:tint="#000000"
+                android:id="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:background="#00A3EBB1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                android:layout_marginTop="16dp"
+                android:minWidth="80dp"
+                android:minHeight="60dp"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </ScrollView>

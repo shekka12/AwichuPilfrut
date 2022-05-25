@@ -21,15 +21,14 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="18dp"
             android:textAlignment="center"
-            android:textSize="30sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
             android:layout_marginTop="12dp"
             android:background="#FFFFFF" />
-           //android:text=""
-            />
+
     <TextView
             android:id="@+id/text_slideshow3"
             android:layout_width="match_parent"
@@ -37,12 +36,14 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="18dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" android:layout_marginTop="12dp"
-            android:background="#FFFFFF" android:text="Falta conexión a la base de datos"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:text="Proximamente"/>
     <TextView
             android:id="@+id/text_slideshow2"
             android:layout_width="match_parent"
@@ -50,12 +51,13 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="18dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            android:layout_marginTop="12dp" android:background="#FFFFFF"/>
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"/>
     <TextView
             android:id="@+id/text_slideshow4"
             android:layout_width="match_parent"
@@ -63,12 +65,14 @@
             android:layout_marginStart="12dp"
             android:layout_marginEnd="18dp"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" android:layout_marginTop="12dp"
-            android:background="#FFFFFF" android:text="Falta conexión a la base de datos"/>
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            android:layout_marginTop="12dp"
+            android:background="#FFFFFF"
+            android:text="Proximamente"/>
     <ImageView
             android:src="@drawable/perfil"
             android:layout_width="wrap_content"
