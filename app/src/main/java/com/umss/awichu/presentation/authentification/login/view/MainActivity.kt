@@ -37,6 +37,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
 
     lateinit var presenter: LoginContract.LoginPresenter
     val mAuth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

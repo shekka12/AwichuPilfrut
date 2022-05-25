@@ -10,14 +10,15 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Awichu">
         <activity
+                android:name=".menuLateral.ui.recordatorios.models.RemainingListActivity"
+                android:exported="true"/>
+        <activity
                 android:name=".menuLateral.ui.recordatorios.RemainActivity"
                 android:exported="true"/>
         <activity
                 android:name=".menuLateral.ui.recordatorios.AddNote"
                 android:exported="true"/>
-        <activity
-                android:name=".menuLateral.ui.recordatorios.CreateRemind"
-                android:exported="true"/>
+
         <activity
                 android:name=".menuLateral.MenuLateralActivity"
                 android:exported="true"
@@ -36,12 +37,7 @@
                 android:name=".presentation.main1.view.MainAwichuActivity"
                 android:exported="true"
                 android:screenOrientation="portrait"/>
-        <activity
-                android:name=".presentation.main1.view.mainAwichuActivity"
-                android:configChanges="orientation|keyboardHidden|screenSize"
-                android:exported="true"
-                android:label="@string/title_activity_main_awichu"
-                android:theme="@style/Theme.Awichu.Fullscreen"/>
+
         <activity
                 android:name=".presentation.authentification.login.view.MainActivity"
                 android:exported="true"

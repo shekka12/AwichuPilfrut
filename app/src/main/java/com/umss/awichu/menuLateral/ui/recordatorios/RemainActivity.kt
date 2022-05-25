@@ -57,15 +57,7 @@ class RemainActivity : AppCompatActivity() {
         }
     }
 
-    //private fun showTimePickerDialog() {
-        //val timePicker = TimePickerFragment {onTimeSelected(it)}
-      //  timePicker.show(supportFragmentManager, "time")
-    //}
 
-    //private fun onTimeSelected(time:String){
-        //editTextTime.setText("$time")
-      //  editTextTime.setText ("$time")
-    //}
 
     private fun showDatePickerDialog() {
         val datePicker = DatePickerFragment{day, month, year -> onDateSelected(day, month, year)}

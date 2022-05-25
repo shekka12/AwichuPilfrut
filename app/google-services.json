@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "531565137377",
-    "project_id": "awiichuapp",
-    "storage_bucket": "awiichuapp.appspot.com"
+    "project_number": "722452033346",
+    "project_id": "awichuuapp",
+    "storage_bucket": "awichuuapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:531565137377:android:cff80cd4063947d11556a0",
+        "mobilesdk_app_id": "1:722452033346:android:e3767cf2b0891fff9962db",
         "android_client_info": {
           "package_name": "com.umss.awichu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "531565137377-ejf0vhvhkfkl9rj42luh5mg0cpmjlnql.apps.googleusercontent.com",
+          "client_id": "722452033346-0n1shj0qgpms17a68looa30a33jt2qhg.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCzy1MFeoCJ2xpo_474wKxqcEHvuOgJV5g"
+          "current_key": "AIzaSyDQfgbyqMd1UmzxZmo1949nM2G1knyPksE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "531565137377-ejf0vhvhkfkl9rj42luh5mg0cpmjlnql.apps.googleusercontent.com",
+              "client_id": "722452033346-0n1shj0qgpms17a68looa30a33jt2qhg.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

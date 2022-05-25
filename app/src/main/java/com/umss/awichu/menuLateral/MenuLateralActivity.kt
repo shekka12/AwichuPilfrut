@@ -15,10 +15,11 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.umss.awichu.R
+import com.umss.awichu.botonesInferiores.BotonRecordatorios
 import com.umss.awichu.databinding.ActivityMenuLateralBinding
 import com.umss.awichu.presentation.authentification.login.view.MainActivity
 
-class MenuLateralActivity : AppCompatActivity() {
+class MenuLateralActivity : AppCompatActivity(){
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMenuLateralBinding
