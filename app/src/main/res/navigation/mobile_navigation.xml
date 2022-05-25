@@ -23,7 +23,9 @@
             android:id="@+id/nav_slideshow"
             android:name="com.umss.awichu.menuLateral.ui.slideshow.SlideshowFragment"
             android:label="Perfil"
-            tools:layout="@layout/fragment_slideshow"/>
+            tools:layout="@layout/fragment_slideshow">
+        <action android:id="@+id/edit" app:destination="@id/editarPerfil"/>
+    </fragment>
     <fragment
             android:id="@+id/id_ayuda_fragment"
             android:name="com.umss.awichu.menuLateral.ui.ayuda.FragmenAyuda"
@@ -53,6 +55,14 @@
         <action android:id="@+id/action_botonRecordatorios_to_remainingListActivity"
                 app:destination="@id/remainingListActivity"/>
     </fragment>
+
+    <fragment
+            android:id="@+id/crearRecordatorio"
+            android:name="com.umss.awichu.botonesInferiores.crearRecordatorio"
+            android:label="Crear Recordatorio" tools:layout="@layout/fragment_crear_recordatorio"/>
+    <activity android:id="@+id/editarPerfil" android:name="com.umss.awichu.botonesInferiores.editarPerfil"
+              android:label="activity_editar_perfil" tools:layout="@layout/activity_editar_perfil"/>
+
     <activity android:id="@+id/remainActivity"
               android:name="com.umss.awichu.menuLateral.ui.recordatorios.RemainActivity"
               android:label="RemainActivity"/>
