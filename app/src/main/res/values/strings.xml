@@ -5,10 +5,10 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="awichu">AWICHU</string>
     <string name="contrase_a">Contraseña</string>
-    <string name="correo_electronico">Correo electronico</string>
+    <string name="correo_electronico">Correo electrónico</string>
     <string name="signup">signUp</string>
-    <string name="confirme_contrase_a">Confirme contraseña</string>
-    <string name="nombre_completo">Nombre Completo</string>
+    <string name="confirme_contrase_a">Verificar Contraseña</string>
+    <string name="nombre_completo">Nombre(s)</string>
     <string name="Loginsignup">SignUP</string>
     <string name="cotrase_a">cotraseña</string>
     <string name="title_activity_menu_lateral">MenuLateralActivity</string>
