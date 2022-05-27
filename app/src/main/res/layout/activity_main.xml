@@ -129,22 +129,21 @@
 			/>
 		</com.google.android.material.textfield.TextInputLayout>
 
-		<Button
-				android:hint="Iniciar Sesión"
-				android:textColorHint="@color/white"
-				android:textSize="20dp"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:layout_gravity="center"
-				android:backgroundTint="#189ab4"
-				android:textColor="@color/white"
-				android:id="@+id/btn_signIn"
-				app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-				app:layout_constraintStart_toStartOf="parent"
-				android:layout_marginTop="16dp"
-				app:layout_constraintEnd_toEndOf="parent"
-				android:layout_marginStart="56dp"
-				android:layout_marginEnd="56dp"/>
+	<Button
+			android:hint="Iniciar Sesión"
+			android:textColorHint="@color/white"
+			android:textSize="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:backgroundTint="#189ab4"
+			android:textColor="@color/white"
+			android:id="@+id/btn_signIn"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginStart="56dp"
+			android:layout_marginEnd="56dp" app:layout_constraintTop_toBottomOf="@+id/btn_LoginG"
+			android:layout_marginTop="8dp"/>
 	<Button
 			android:hint="Registrarse"
 			android:textSize="20dp"
@@ -195,15 +194,14 @@
 			android:layout_height="wrap_content"
 			android:src="@drawable/ic_hide_password_24"
 			app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail"
-			app:layout_constraintBottom_toTopOf="@+id/btn_signIn"
 			app:layout_constraintStart_toEndOf="@+id/textInputLayout"
 			app:layout_constraintEnd_toEndOf="parent"
 			android:layout_marginStart="8dp"
 			android:layout_marginEnd="8dp"
 			app:layout_constraintHorizontal_bias="0.0"
-			app:layout_constraintVertical_bias="0.409"/>
+			app:layout_constraintBottom_toTopOf="@+id/btn_LoginG"/>
 	<CheckBox
-			android:text="Recordar cuenta"
+			android:text="Mantener sesión iniciada"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:id="@+id/checkBoxLogin"
@@ -211,9 +209,27 @@
 			android:textStyle="bold"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.302"
+			app:layout_constraintHorizontal_bias="0.326"
 			app:layout_constraintTop_toBottomOf="@+id/btn_signIn"
 	/>
+
+	<Button
+			android:hint="Continuar con Google"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:id="@+id/btn_LoginG"
+			android:backgroundTint="#189ab4"
+			android:textColorHint="@color/white"
+			android:textSize="20dp"
+			android:drawableLeft="@drawable/logogoogle"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginStart="56dp"
+			android:layout_marginEnd="56dp"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+			android:layout_marginTop="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

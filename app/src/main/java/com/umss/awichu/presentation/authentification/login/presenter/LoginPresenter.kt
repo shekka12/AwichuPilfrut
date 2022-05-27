@@ -56,6 +56,7 @@ class LoginPresenter(signInInteractor: SignInInteractor): LoginContract.LoginPre
 
     }
 
+
     override fun checkEmptyEmail(email: String): Boolean {
         return email.isEmpty()
     }
