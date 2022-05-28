@@ -69,7 +69,7 @@ class MainActivity : BaseActivity(), LoginContract.loginView {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
