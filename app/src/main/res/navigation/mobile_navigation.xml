@@ -16,7 +16,6 @@
         <action android:id="@+id/confi" app:destination="@id/botonConfiguracion"/>
         <action android:id="@+id/recor" app:destination="@id/botonRecordatorios"/>
         <action android:id="@+id/gotoRemainRecycler" app:destination="@id/remainingListActivity"/>
-        <action android:id="@+id/wait" app:destination="@id/mainAwichuActivity"/>
     </fragment>
 
     <fragment
@@ -24,7 +23,7 @@
             android:name="com.umss.awichu.menuLateral.ui.slideshow.SlideshowFragment"
             android:label="Perfil"
             tools:layout="@layout/fragment_slideshow">
-        <action android:id="@+id/edit" app:destination="@id/editarPerfil"/>
+        <action android:id="@+id/action_nav_slideshow_to_editProfil" app:destination="@id/gotoEditProfil"/>
     </fragment>
     <fragment
             android:id="@+id/id_ayuda_fragment"
@@ -72,5 +71,7 @@
     <activity android:id="@+id/mainAwichuActivity"
               android:name="com.umss.awichu.presentation.main1.view.MainAwichuActivity"
               android:label="activity_main_awichu" tools:layout="@layout/activity_main_awichu"/>
+    <activity android:id="@+id/gotoEditProfil" android:name="com.umss.awichu.menuLateral.ui.slideshow.EditProfil"
+              android:label="activity_edit_profil" tools:layout="@layout/activity_edit_profil"/>
 
 </navigation>

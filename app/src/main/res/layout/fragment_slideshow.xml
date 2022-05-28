@@ -42,8 +42,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView9"
             android:layout_marginTop="12dp"
-            android:background="#FFFFFF"
-            android:text="Proximamente"/>
+            android:background="#FFFFFF"/>
     <TextView
             android:id="@+id/text_slideshow2"
             android:layout_width="match_parent"
@@ -71,8 +70,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
             android:layout_marginTop="12dp"
-            android:background="#FFFFFF"
-            android:text="Proximamente"/>
+            android:background="#FFFFFF"/>
     <ImageView
             android:src="@drawable/perfil"
             android:layout_width="wrap_content"
@@ -138,10 +136,12 @@
             android:layout_marginStart="9dp"
             android:textSize="20sp"/>
     <Button
-            android:text="Editar Perfil"
+
+            android:hint="Editar Perfil"
+            android:textColorHint="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonED"
+            android:id="@+id/edditBtn"
             android:backgroundTint="#4CAF50"
             app:layout_constraintTop_toBottomOf="@+id/text_slideshow4" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="36dp"

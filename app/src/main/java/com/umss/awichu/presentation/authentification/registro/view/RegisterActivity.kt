@@ -7,16 +7,13 @@ import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
-import com.google.android.gms.dynamic.IFragmentWrapper
 import com.umss.awichu.R
 import com.umss.awichu.base.BaseActivity
 import com.umss.awichu.menuLateral.MenuLateralActivity
 import com.umss.awichu.presentation.authentification.registro.registerInteractor.registerInteractorImpl
 import com.umss.awichu.presentation.authentification.login.view.MainActivity
-import com.umss.awichu.presentation.main1.view.MainAwichuActivity
 import com.umss.awichu.presentation.authentification.registro.RegisterContract
 import com.umss.awichu.presentation.authentification.registro.presenter.RegisterPresenter
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity(), RegisterContract.registerView {

@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.fragment_slideshow.*
 
 class SlideshowFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
     private var _binding: FragmentSlideshowBinding? = null
     var mDatabase = FirebaseDatabase.getInstance().reference
     var mAuth = FirebaseAuth.getInstance()
@@ -30,7 +29,6 @@ class SlideshowFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        slideshowViewModel = ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
         _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -39,6 +37,9 @@ class SlideshowFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         getInfoUser()
+        edditBtn.setOnClickListener {
+            findNavController().navigate(R.id.gotoEditProfil)
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -50,8 +51,13 @@ class SlideshowFragment : Fragment() {
                 if(dataSnapshot.exists()){
                     val name: String = dataSnapshot.child("username").value.toString()
                     val lastname: String = dataSnapshot.child("lastname").value.toString()
+                    val phone: String = dataSnapshot.child("phone").value.toString()
+                    val ci: String = dataSnapshot.child("ci").value.toString()
                     text_slideshow.setText(name)
                     text_slideshow2.setText(lastname)
+                    text_slideshow3.setText(phone)
+                    text_slideshow4.setText(ci)
+
 
                 }
             }
@@ -69,10 +75,5 @@ class SlideshowFragment : Fragment() {
         _binding = null
     }
 
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        buttonED.setOnClickListener{
-            findNavController().navigate(R.id.edit)
-        }
-        super.onViewStateRestored(savedInstanceState)
-    }
+
 }

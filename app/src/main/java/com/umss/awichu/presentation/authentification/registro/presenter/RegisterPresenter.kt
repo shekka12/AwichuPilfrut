@@ -65,7 +65,7 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
         registerInteractor?.signUp(fullname,email, password1, object: RegisterInteractor.registerCallBack{
             override fun onRegisterSucces() {
                 val userId: String = mAuth.currentUser!!.uid
-                writeNewUser(fullname, email, userId, lastname)
+                writeNewUser(fullname, email, userId, lastname,"","")
                 view?.navigateToMain()
                 view?.HideProgress()
             }
@@ -77,13 +77,13 @@ class RegisterPresenter(registerInteractor: RegisterInteractor): RegisterContrac
 
         })
     }
-    data class User(val username: String? = null,val lastname: String, val email: String? = null) {
+    data class User(val username: String? = null,val lastname: String, val email: String? = null, val phone: String, val CI: String) {
         // Null default values create a no-argument default constructor, which is needed
         // for deserialization from a DataSnapshot.
     }
 
-    fun writeNewUser(fullname: String, email: String, userId: String, lastname: String) {
-        val user = User(fullname, lastname, email)
+    fun writeNewUser(fullname: String, email: String, userId: String, lastname: String, phone: String, CI: String) {
+        val user = User(fullname, lastname, email, phone, CI)
         mDatabase.child("Users").child(userId).setValue(user)
     }
 

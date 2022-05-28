@@ -7,32 +7,41 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.umss.awichu.R
+import com.umss.awichu.botonesInferiores.BotonRecordatorios
+import kotlinx.android.synthetic.main.item_rv.view.*
 
 
+class RemainAdapter(private val remainingList: ArrayList<Remaining>,
+                    private val itemClickListenner: BotonRecordatorios
+): RecyclerView.Adapter<baseViewHolder<*>>() {
 
-class RemainAdapter(private val remainingList: ArrayList<Remaining>): RecyclerView.Adapter<RemainAdapter.MyViewHolder1>(){
-
-
-    class MyViewHolder1(itemView: View): RecyclerView.ViewHolder(itemView){
-        val nameRemain1: TextView = itemView.findViewById(R.id.etx_nameItem)
-        val dateRemain1: TextView = itemView.findViewById(R.id.etx_dateItem)
+    interface onRemainClickListenner {
+        fun onRemainClick(nombre: String)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder1 {
-
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_rv, parent, false)
-        return MyViewHolder1(itemView)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): baseViewHolder<*> {
+        return remainingViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_rv, parent, false))
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder1, position: Int) {
-        val currentItem = remainingList[position]
-
-        holder.nameRemain1.text = currentItem.nombre
-        holder.dateRemain1.text = currentItem.fechaRecordatorio
+    override fun onBindViewHolder(holder: baseViewHolder<*>, position: Int) {
+        when (holder) {
+            is remainingViewHolder -> holder.bind(remainingList[position], position)
+            else -> throw IllegalArgumentException("Error")
+        }
     }
 
     override fun getItemCount(): Int {
-        return  remainingList.size
+        return remainingList.size
     }
 
+    inner class remainingViewHolder(itemView: View) : baseViewHolder<Remaining>(itemView) {
+        override fun bind(item: Remaining, position: Int) {
+            itemView.setOnClickListener { itemClickListenner.onRemainClick(item.nombre) }
+            itemView.etx_nameItem.text = item.nombre
+            itemView.etx_dateItem.text = item.fechaRecordatorio
+            itemView.etx_hourItem.text = item.hora
+
+        }
+
+    }
 }

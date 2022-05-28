@@ -9,4 +9,6 @@ class editarPerfil : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editar_perfil)
     }
+
+
 }
